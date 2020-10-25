@@ -1,6 +1,6 @@
 import React from 'react';
 import {HeaderContainer, DivLogo} from './HeaderStyled';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 const Header = () => {
     return (

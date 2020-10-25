@@ -1,7 +1,7 @@
 import React from 'react';
 import {MainContainer, Div404, DivPageNotFound} from './NotFoundStyled';
 import {ButtonDefault} from '../../theme/globalStyles';
-import Link from 'next/Link';
+import Link from 'next/link';
 import global from 'global';
 import Head from 'next/head';
 
