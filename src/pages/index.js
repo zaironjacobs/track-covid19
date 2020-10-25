@@ -9,7 +9,8 @@ export default function Home({worldwideData, countriesData}) {
 }
 
 export const getServerSideProps = async () => {
-    let countriesData = await axios.get('http://127.0.0.1:8000/countries')
+    const django_url = process.env.DJANGO_URL;
+    let countriesData = await axios.get(django_url + '/countries')
         .then((data) => {
             return data
         })
@@ -20,7 +21,7 @@ export const getServerSideProps = async () => {
     countriesData = countriesData.filter((item) => item.name !== 'Worldwide');
 
     const worldwideParams = {country: 'Worldwide'}
-    let worldwideData = await axios.get('http://127.0.0.1:8000/country',
+    let worldwideData = await axios.get(django_url + '/country',
         {params: worldwideParams})
         .then((data) => {
             return data
