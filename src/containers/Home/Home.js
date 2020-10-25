@@ -22,7 +22,7 @@ export default function Home({worldwideData, countriesData}) {
         'October', 'November', 'December'];
     const weekNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const dateString = weekNames[date.getDay()] + ' ' + monthNames[date.getMonth()] + ' ' + date.getDate() + ' ' +
-        date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes();
+        date.getFullYear() + ' ' + date.getHours() + ':' + '0' + date.getMinutes().slice(-2);
 
     let countryOptions = []
     countriesData.forEach(function (country) {
