@@ -9,6 +9,7 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  border-top: 1px solid ${theme.colors.lightGrey};
   
   ${theme.mediaQueries.mobileLandscape} {}
   
@@ -17,6 +18,22 @@ export const FooterContainer = styled.footer`
   ${theme.mediaQueries.tabletLandscape} {
     height: ${theme.heights.footer};
   }
+  
+  ${theme.mediaQueries.laptop} {}
+`;
+
+export const DivContent = styled.div`
+  max-width: ${theme.widths.contentDefault};
+  width: 100%;
+  margin: 0 auto;
+  padding-left: ${theme.paddings.contentDefault};
+  padding-right: ${theme.paddings.contentDefault};
+  
+  ${theme.mediaQueries.mobileLandscape} {}
+  
+  ${theme.mediaQueries.tabletPortrait} {}
+  
+  ${theme.mediaQueries.tabletLandscape} {}
   
   ${theme.mediaQueries.laptop} {}
 `;
@@ -34,35 +51,11 @@ export const DivCopyright = styled.div`
   ${theme.mediaQueries.laptop} {}
 `;
 
-export const DivWrapper = styled.div`
-  position: absolute;
+export const DivInfoWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  
-  padding: 0 ${theme.spaces.mobilePortrait} 0 ${theme.spaces.mobilePortrait};
-  
-  ${theme.mediaQueries.mobileLandscape} {}
-  
-  ${theme.mediaQueries.tabletPortrait} {}
-  
-  ${theme.mediaQueries.tabletLandscape} {
-    padding: 0 ${theme.spaces.tabletLandscape} 0 ${theme.spaces.tabletLandscape};
-  }
-  
-  ${theme.mediaQueries.laptop} {
-    padding: 0 ${theme.spaces.laptop} 0 ${theme.spaces.laptop};
-  }
-`;
-
-export const DivTopLine = styled.div`
-  background-color: ${theme.colors.lightGrey};
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  top: 0;
   
   ${theme.mediaQueries.mobileLandscape} {}
   
@@ -70,9 +63,7 @@ export const DivTopLine = styled.div`
   
   ${theme.mediaQueries.tabletLandscape} {}
   
-  ${theme.mediaQueries.laptop} {
-    margin: 0 ${theme.spaces.laptop} 0 ${theme.spaces.laptop};
-  }
+  ${theme.mediaQueries.laptop} {}
 `;
 
 export const DivGithubIconWrapper = styled.div`

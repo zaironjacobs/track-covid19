@@ -42,7 +42,7 @@ export const DivTopIconWrapper = styled.div`
   ${theme.mediaQueries.laptop} {}
 `;
 
-export const H1Worldwide = styled.h1`
+export const H1Country = styled.h1`
   font-weight: 400;
   
   ${theme.mediaQueries.mobileLandscape} {}
@@ -64,7 +64,7 @@ export const DivBoxesWrapper = styled.div`
   ${theme.mediaQueries.tabletPortrait} {}
   
   ${theme.mediaQueries.tabletLandscape} {
-  flex-direction: row;
+    flex-direction: row;
     justify-content: space-between;
   }
   
@@ -85,7 +85,7 @@ export const DivBox = styled.div`
   ${theme.mediaQueries.tabletPortrait} {}
   
   ${theme.mediaQueries.tabletLandscape} {
-    width: 250px;
+    width: 275px;
   }
   
   ${theme.mediaQueries.laptop} {}

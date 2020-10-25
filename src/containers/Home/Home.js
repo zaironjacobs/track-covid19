@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {
-    MainContainer, DivBoxesWrapper, DivBox, DivBoxPanelHeading, H1Worldwide, DivCasesNumbers,
+    MainContainer, DivBoxesWrapper, DivBox, DivBoxPanelHeading, H1Country, DivCasesNumbers,
     DivTopIconWrapper, DivLastUpdated, ButtonToggle, ButtonToggleWrapper, SelectWrapper
 } from './HomeStyled';
 import global from 'global';
@@ -55,7 +55,7 @@ export default function Home({worldwideData, countriesData}) {
                         <WorldwideIcon className='top-icon'/>
                     </DivTopIconWrapper>
 
-                    <H1Worldwide>Worldwide</H1Worldwide>
+                    <H1Country>Worldwide</H1Country>
 
                     <DivBoxesWrapper>
                         <DivBox>
@@ -110,7 +110,7 @@ export default function Home({worldwideData, countriesData}) {
                         />
                     </SelectWrapper>
 
-                    <H1Worldwide>{selectedCountry != null ? selectedCountry.value.name : ''}</H1Worldwide>
+                    <H1Country>{selectedCountry != null ? selectedCountry.value.name : ''}</H1Country>
 
                     <DivBoxesWrapper>
                         <DivBox>

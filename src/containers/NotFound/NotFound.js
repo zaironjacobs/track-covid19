@@ -1,5 +1,5 @@
 import React from 'react';
-import {MainContainer, Div404, DivPageNotFound} from './NotFoundStyled';
+import {MainContainer, Div404, Div404Wrapper, DivPageNotFound} from './NotFoundStyled';
 import {ButtonDefault} from '../../theme/globalStyles';
 import Link from 'next/link';
 import global from 'global';
@@ -12,9 +12,11 @@ const NotFound = () => {
                 <title>Page not found – {global.siteName}</title>
                 <meta name='description' content='page not found'/>
             </Head>
-            <Div404>404</Div404>
-            <DivPageNotFound>Page Not Found</DivPageNotFound>
-            <Link href={global.paths.index}><ButtonDefault>Back Home</ButtonDefault></Link>
+            <Div404Wrapper>
+                <Div404>404</Div404>
+                <DivPageNotFound>Page Not Found</DivPageNotFound>
+                <Link href={global.paths.index}><ButtonDefault>Track COVID-19</ButtonDefault></Link>
+            </Div404Wrapper>
         </MainContainer>
     );
 }

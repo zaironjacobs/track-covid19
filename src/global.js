@@ -1,5 +1,5 @@
 export default {
-    siteName: 'COVID-19',
+    siteName: 'Track COVID-19',
 
     paths: {
         index: '/',

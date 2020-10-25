@@ -2,12 +2,8 @@ export default {
     colors: {
         black: '#000000',
         white: '#ffffff',
-        xiketic: '#0d0c1d',
         denimBlue: '#2944BA',
         royalBlueLight: '#536CD9',
-        royalBlueDark: '#231F57',
-        babyBlueEyes: '#99BDE9',
-        imperialRed: '#e63946',
         lightGrey: '#D6D6D6',
 
         casesBoxRed: '#FF443B',
@@ -36,10 +32,12 @@ export default {
         footer: '100px'
     },
 
-    spaces: {
-        mobilePortrait: '3%',
-        tabletLandscape: '5%',
-        laptop: '20%'
+    widths: {
+        contentDefault: '1366px'
+    },
+
+    paddings: {
+        contentDefault: '15px'
     },
 
     mediaQueries: {

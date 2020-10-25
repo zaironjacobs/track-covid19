@@ -117,10 +117,13 @@ export const DivApp = styled.div`
   ${theme.mediaQueries.laptop} {}
 `;
 
-export const DivContainer = styled.div`
+export const DivContent = styled.div`
   min-height: calc(100vh - ${theme.heights.mobileHeader} - ${theme.heights.mobileFooter});
-  padding: 0 ${theme.spaces.mobilePortrait} 0 ${theme.spaces.mobilePortrait};
-  display: flex;
+  max-width: ${theme.widths.contentDefault};
+  width: 100%;
+  margin: 0 auto;
+  padding-left: ${theme.paddings.contentDefault};
+  padding-right: ${theme.paddings.contentDefault};
   
   ${theme.mediaQueries.mobileLandscape} {}
   
@@ -128,12 +131,9 @@ export const DivContainer = styled.div`
   
   ${theme.mediaQueries.tabletLandscape} {
     min-height: calc(100vh - ${theme.heights.header} - ${theme.heights.footer});
-    padding: 0 ${theme.spaces.tabletLandscape} 0 ${theme.spaces.tabletLandscape};
-  }
+    }
   
-  ${theme.mediaQueries.laptop} {
-    padding: 0 ${theme.spaces.laptop} 0 ${theme.spaces.laptop};
-  }
+  ${theme.mediaQueries.laptop} {}
 `;
 
 export const AnchorArrowUp = styled.a`

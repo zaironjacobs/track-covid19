@@ -1,6 +1,6 @@
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
-import {DivApp, AnchorArrowUp, DivContainer} from 'theme/globalStyles';
+import {DivApp, AnchorArrowUp, DivContent} from 'theme/globalStyles';
 import {ThemeProvider} from "styled-components";
 import Theme from 'theme/theme';
 import {GlobalStyles} from 'theme/globalStyles';
@@ -51,9 +51,9 @@ export default function MyApp({Component, pageProps}) {
                 <ThemeProvider theme={Theme}>
                     <GlobalStyles/>
                     <Header/>
-                    <DivContainer>
+                    <DivContent>
                         <Component {...pageProps} />
-                    </DivContainer>
+                    </DivContent>
                     <Footer/>
                     <AnchorArrowUp arrowUpOpen={arrowUpOpen}>
                         <i onClick={toTop} className="fas fa-arrow-up arrow-up"/>

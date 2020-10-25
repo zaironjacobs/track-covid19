@@ -5,6 +5,20 @@ import {Main} from 'theme/globalStyles';
 export const MainContainer = styled(Main)`
   display: flex;
   justify-content: center;
+  min-height: inherit;
+  
+  ${theme.mediaQueries.mobileLandscape} {}
+  
+  ${theme.mediaQueries.tabletPortrait} {}
+  
+  ${theme.mediaQueries.tabletLandscape} {}
+  
+  ${theme.mediaQueries.laptop} {}
+`;
+
+export const Div404Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
   flex-flow: column;
   align-items: center;
 
@@ -18,7 +32,6 @@ export const MainContainer = styled(Main)`
 `;
 
 export const Div404 = styled.div`
-  color: ${theme.colors.white};
   font-size: 5rem;
   line-height: 1;
   text-transform: uppercase;
@@ -37,7 +50,6 @@ export const Div404 = styled.div`
 `;
 
 export const DivPageNotFound = styled.div`
-   color: ${theme.colors.white};
    font-size: ${theme.fontSizes.small};
    margin-bottom: 0.5rem;
    text-transform: uppercase;

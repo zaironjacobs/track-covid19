@@ -3,7 +3,7 @@ import theme from 'theme/theme';
 
 export const HeaderContainer = styled.header`
   height: ${theme.heights.mobileHeader};
-  padding: 0 ${theme.spaces.mobilePortrait} 0 ${theme.spaces.mobilePortrait};
+  margin: 0 auto;
   position: sticky;
   top: 0;
   background: ${theme.colors.white};
@@ -19,12 +19,25 @@ export const HeaderContainer = styled.header`
   
   ${theme.mediaQueries.tabletLandscape} {
     height: ${theme.heights.header};
-    padding: 0 ${theme.spaces.tabletLandscape} 0 ${theme.spaces.tabletLandscape};
-  }
+    }
   
-  ${theme.mediaQueries.laptop} {
-    padding: 0 ${theme.spaces.laptop} 0 ${theme.spaces.laptop};
-  }
+  ${theme.mediaQueries.laptop} {}
+`;
+
+export const DivContent = styled.div`
+  max-width: ${theme.widths.contentDefault};
+  width: 100%;
+  margin: 0 auto;
+  padding-left: ${theme.paddings.contentDefault};
+  padding-right: ${theme.paddings.contentDefault};
+  
+  ${theme.mediaQueries.mobileLandscape} {}
+  
+  ${theme.mediaQueries.tabletPortrait} {}
+  
+  ${theme.mediaQueries.tabletLandscape} {}
+  
+  ${theme.mediaQueries.laptop} {}
 `;
 
 export const ButtonBurger = styled.button`
@@ -77,7 +90,6 @@ export const ButtonBurger = styled.button`
 export const DivLogo = styled.div`
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  width: 100%;
   text-align: center;
   
   a {
@@ -98,6 +110,27 @@ export const DivLogo = styled.div`
   ${theme.mediaQueries.tabletLandscape} {
     padding-left: 0;
   }
+  
+  ${theme.mediaQueries.laptop} {}
+`;
+
+export const DivLogoWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  .coronavirus-icon {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+  }
+  
+  ${theme.mediaQueries.mobileLandscape} {}
+  
+  ${theme.mediaQueries.tabletPortrait} {}
+  
+  ${theme.mediaQueries.tabletLandscape} {}
   
   ${theme.mediaQueries.laptop} {}
 `;
