@@ -11,6 +11,7 @@
   "dependencies": {
     "@svgr/webpack": "^5.4.0",
     "axios": "^0.20.0",
+    "moment": "^2.29.1",
     "mongodb": "^3.6.2",
     "next": "^9.5.5",
     "react": "16.13.1",

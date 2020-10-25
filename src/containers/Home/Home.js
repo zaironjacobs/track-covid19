@@ -5,8 +5,9 @@ import {
 } from './HomeStyled';
 import global from 'global';
 import Head from 'next/head';
-import Select from 'react-select'
-import theme from 'theme/theme'
+import Select from 'react-select';
+import theme from 'theme/theme';
+import moment from 'moment';
 import WorldwideIcon from '../../../public/assets/images/worldwide.svg';
 import CountrySearchIcon from '../../../public/assets/images/country_search.svg';
 
@@ -18,11 +19,7 @@ export default function Home({worldwideData, countriesData}) {
     const [selectedCountry, setSelectedCountry] = useState(null);
 
     const date = new Date(worldwideData.updated_at);
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
-        'October', 'November', 'December'];
-    const weekNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const dateString = weekNames[date.getDay()] + ' ' + monthNames[date.getMonth()] + ' ' + date.getDate() + ' ' +
-        date.getFullYear() + ' ' + date.getHours() + ':' + '0' + date.getMinutes().slice(-2);
+    const dateString = moment(date).format('ddd MMM DD YYYY HH:mm');
 
     let countryOptions = []
     countriesData.forEach(function (country) {
