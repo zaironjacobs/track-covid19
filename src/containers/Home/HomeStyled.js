@@ -43,7 +43,6 @@ export const DivTopIconWrapper = styled.div`
 `;
 
 export const H1Country = styled.h1`
-  font-weight: 400;
   
   ${theme.mediaQueries.mobileLandscape} {}
   

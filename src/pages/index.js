@@ -9,27 +9,28 @@ export default function Home({worldwideData, countriesData}) {
 }
 
 export const getServerSideProps = async () => {
-    const django_url = process.env.DJANGO_URL;
-    let countriesData = await axios.get(django_url + '/countries')
-        .then((data) => {
-            return data
-        })
-        .catch((error) => {
-            return error
-        });
-    countriesData = countriesData.data;
-    countriesData = countriesData.filter((item) => item.name !== 'Worldwide');
+    const apiUrl = process.env.DJANGO_API_URL;
 
-    const worldwideParams = {country: 'Worldwide'}
-    let worldwideData = await axios.get(django_url + '/country',
-        {params: worldwideParams})
-        .then((data) => {
-            return data
+    let countriesData = null
+    await axios.get(apiUrl + '/countries')
+        .then((res) => {
+            countriesData = res.data
         })
-        .catch((error) => {
-            return error
+        .catch((err) => {
+            console.log(err)
         });
-    worldwideData = worldwideData.data;
+    if (countriesData !== null) {
+        countriesData = countriesData.filter((item) => item.name !== 'Worldwide');
+    }
+
+    let worldwideData = null
+    await axios.get(apiUrl + '/country?country=Worldwide')
+        .then((res) => {
+            worldwideData = res.data
+        })
+        .catch((err) => {
+            console.log(err)
+        });
 
     return {
         props: {worldwideData, countriesData}

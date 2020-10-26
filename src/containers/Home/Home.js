@@ -8,23 +8,29 @@ import Head from 'next/head';
 import Select from 'react-select';
 import theme from 'theme/theme';
 import moment from 'moment';
-import WorldwideIcon from '../../../public/assets/images/worldwide.svg';
-import CountrySearchIcon from '../../../public/assets/images/country_search.svg';
+import worldwideIcon from 'assets/images/worldwide.svg';
+import countrySearchIcon from 'assets/images/country_search.svg';
 
-const worldwide = 'worldwide'
-const country = 'country'
+const worldwideView = 'worldwideView';
+const countryView = 'countryView';
 
 export default function Home({worldwideData, countriesData}) {
-    const [view, setView] = useState(worldwide);
+    const [view, setView] = useState(worldwideView);
     const [selectedCountry, setSelectedCountry] = useState(null);
 
-    const date = new Date(worldwideData.updated_at);
-    const dateString = moment(date).format('ddd MMM DD YYYY HH:mm');
+    let dateString = '';
+    let countryOptions = [];
 
-    let countryOptions = []
-    countriesData.forEach(function (country) {
-        countryOptions.push({value: country, label: country.name})
-    });
+    if (worldwideData !== null) {
+        const date = new Date(worldwideData.last_updated_by_source_at);
+        dateString = moment(date).format('ddd MMM DD YYYY HH:mm');
+    }
+
+    if (countriesData !== null) {
+        countriesData.forEach(function (country) {
+            countryOptions.push({value: country, label: country.name})
+        });
+    }
 
     const selectCustomStyles = {
         option: (styles) => ({
@@ -37,6 +43,14 @@ export default function Home({worldwideData, countriesData}) {
         })
     }
 
+    const toggleView = () => {
+        if (view === worldwideView) {
+            setView(countryView);
+        } else {
+            setView(worldwideView);
+        }
+    }
+
     return (
         <MainContainer>
 
@@ -45,14 +59,25 @@ export default function Home({worldwideData, countriesData}) {
                 <meta name='description' content='home'/>
             </Head>
 
-            {view === worldwide ?
-                <>
-                    <ButtonToggleWrapper>
-                        <ButtonToggle onClick={() => setView('country')}>Switch to Country View</ButtonToggle>
-                    </ButtonToggleWrapper>
+            <ButtonToggleWrapper>
+                {view === worldwideView &&
+                <ButtonToggle onClick={toggleView}>
+                    Switch to Country View &nbsp;
+                    <i className='fas fa-arrow-circle-right'/>
+                </ButtonToggle>
+                }
+                {view === countryView &&
+                <ButtonToggle onClick={toggleView}>
+                    <i className='fas fa-arrow-circle-left'/>
+                    &nbsp; Switch to Worldwide View
+                </ButtonToggle>
+                }
+            </ButtonToggleWrapper>
 
+            {view === worldwideView ?
+                <>
                     <DivTopIconWrapper>
-                        <WorldwideIcon className='top-icon'/>
+                        <img src={worldwideIcon} className='top-icon' alt='world'/>
                     </DivTopIconWrapper>
 
                     <H1Country>Worldwide</H1Country>
@@ -62,28 +87,28 @@ export default function Home({worldwideData, countriesData}) {
                             <DivBoxPanelHeading color={theme.colors.casesBoxYellow}>
                                 Total Confirmed
                             </DivBoxPanelHeading>
-                            <DivCasesNumbers>{worldwideData.confirmed}</DivCasesNumbers>
+                            <DivCasesNumbers>{worldwideData ? worldwideData.confirmed : '-'}</DivCasesNumbers>
                         </DivBox>
 
                         <DivBox>
                             <DivBoxPanelHeading color={theme.colors.casesBoxRed}>
                                 Total Deaths
                             </DivBoxPanelHeading>
-                            <DivCasesNumbers>{worldwideData.deaths}</DivCasesNumbers>
+                            <DivCasesNumbers>{worldwideData ? worldwideData.deaths : '-'}</DivCasesNumbers>
                         </DivBox>
 
                         <DivBox>
                             <DivBoxPanelHeading color={theme.colors.casesBoxGreen}>
                                 Total Recovered
                             </DivBoxPanelHeading>
-                            <DivCasesNumbers>{worldwideData.recovered}</DivCasesNumbers>
+                            <DivCasesNumbers>{worldwideData ? worldwideData.recovered : '-'}</DivCasesNumbers>
                         </DivBox>
 
                         <DivBox>
                             <DivBoxPanelHeading color={theme.colors.casesBoxBlue}>
                                 Total Active
                             </DivBoxPanelHeading>
-                            <DivCasesNumbers>{worldwideData.active}</DivCasesNumbers>
+                            <DivCasesNumbers>{worldwideData ? worldwideData.active : '-'}</DivCasesNumbers>
                         </DivBox>
                     </DivBoxesWrapper>
 
@@ -91,14 +116,10 @@ export default function Home({worldwideData, countriesData}) {
                 </>
                 : null}
 
-            {view === country ?
+            {view === countryView ?
                 <>
-                    <ButtonToggleWrapper>
-                        <ButtonToggle onClick={() => setView('worldwide')}>Switch to Worldwide View</ButtonToggle>
-                    </ButtonToggleWrapper>
-
                     <DivTopIconWrapper>
-                        <CountrySearchIcon className='top-icon'/>
+                        <img src={countrySearchIcon} className='top-icon' alt='country_search'/>
                     </DivTopIconWrapper>
 
                     <SelectWrapper>
@@ -118,7 +139,7 @@ export default function Home({worldwideData, countriesData}) {
                                 Total Confirmed
                             </DivBoxPanelHeading>
                             <DivCasesNumbers>
-                                {selectedCountry != null ? selectedCountry.value.confirmed : 0}
+                                {selectedCountry ? selectedCountry.value.confirmed : '-'}
                             </DivCasesNumbers>
                         </DivBox>
 
@@ -127,7 +148,7 @@ export default function Home({worldwideData, countriesData}) {
                                 Total Deaths
                             </DivBoxPanelHeading>
                             <DivCasesNumbers>
-                                {selectedCountry != null ? selectedCountry.value.deaths : 0}
+                                {selectedCountry ? selectedCountry.value.deaths : '-'}
                             </DivCasesNumbers>
                         </DivBox>
 
@@ -136,7 +157,7 @@ export default function Home({worldwideData, countriesData}) {
                                 Total Recovered
                             </DivBoxPanelHeading>
                             <DivCasesNumbers>
-                                {selectedCountry != null ? selectedCountry.value.recovered : 0}
+                                {selectedCountry ? selectedCountry.value.recovered : '-'}
                             </DivCasesNumbers>
                         </DivBox>
 
@@ -145,12 +166,12 @@ export default function Home({worldwideData, countriesData}) {
                                 Total Active
                             </DivBoxPanelHeading>
                             <DivCasesNumbers>
-                                {selectedCountry != null ? selectedCountry.value.active : 0}
+                                {selectedCountry ? selectedCountry.value.active : '-'}
                             </DivCasesNumbers>
                         </DivBox>
                     </DivBoxesWrapper>
 
-                    <DivLastUpdated>Last updated: {dateString}</DivLastUpdated>
+                    <DivLastUpdated>Last updated: {dateString ? dateString : ''}</DivLastUpdated>
                 </>
                 : null}
 

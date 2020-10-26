@@ -5,8 +5,6 @@ import {ThemeProvider} from "styled-components";
 import Theme from 'theme/theme';
 import {GlobalStyles} from 'theme/globalStyles';
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
-import {SWRConfig} from 'swr';
 import Head from 'next/head';
 import global from 'global';
 
@@ -30,9 +28,6 @@ export default function MyApp({Component, pageProps}) {
         window.addEventListener("scroll", arrowUpScrollFunction);
     });
 
-
-    const fetcher = (url) => axios(url).then(res => res.data);
-
     return (
         <DivApp>
             <Head>
@@ -47,19 +42,17 @@ export default function MyApp({Component, pageProps}) {
                     integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
                     crossOrigin='anonymous'/>
             </Head>
-            <SWRConfig value={fetcher}>
-                <ThemeProvider theme={Theme}>
-                    <GlobalStyles/>
-                    <Header/>
-                    <DivContent>
-                        <Component {...pageProps} />
-                    </DivContent>
-                    <Footer/>
-                    <AnchorArrowUp arrowUpOpen={arrowUpOpen}>
-                        <i onClick={toTop} className="fas fa-arrow-up arrow-up"/>
-                    </AnchorArrowUp>
-                </ThemeProvider>
-            </SWRConfig>
+            <ThemeProvider theme={Theme}>
+                <GlobalStyles/>
+                <Header/>
+                <DivContent>
+                    <Component {...pageProps} />
+                </DivContent>
+                <Footer/>
+                <AnchorArrowUp arrowUpOpen={arrowUpOpen}>
+                    <i onClick={toTop} className="fas fa-arrow-up arrow-up"/>
+                </AnchorArrowUp>
+            </ThemeProvider>
         </DivApp>
     )
 }

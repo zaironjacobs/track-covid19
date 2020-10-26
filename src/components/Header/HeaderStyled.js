@@ -124,6 +124,17 @@ export const DivLogoWrapper = styled.div`
     height: 35px;
     width: 35px;
     margin-right: 10px;
+    
+    ${theme.mediaQueries.mobileLandscape} {}
+  
+    ${theme.mediaQueries.tabletPortrait} {}
+  
+    ${theme.mediaQueries.tabletLandscape} {
+      height: 50px;
+      width: 50px;
+    }
+  
+    ${theme.mediaQueries.laptop} {}
   }
   
   ${theme.mediaQueries.mobileLandscape} {}

@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3 {
     color: ${theme.colors.black};
-    font-weight: 200;
+    font-weight: 400;
     text-align: center;
     text-transform: uppercase;
   }
