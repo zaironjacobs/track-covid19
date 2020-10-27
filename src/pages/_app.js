@@ -31,7 +31,7 @@ export default function MyApp({Component, pageProps}) {
     return (
         <DivApp>
             <Head>
-                <title>{'Site – ' + global.siteName}</title>
+                <title>{global.siteName}</title>
                 <meta name='viewport' content='width=device-width, initial-scale=1'/>
                 <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8'/>
                 <meta name='format-detection' content='telephone=no'/>

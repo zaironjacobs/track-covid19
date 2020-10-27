@@ -62,12 +62,11 @@ export const DivBoxesWrapper = styled.div`
   
   ${theme.mediaQueries.tabletPortrait} {}
   
-  ${theme.mediaQueries.tabletLandscape} {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  ${theme.mediaQueries.tabletLandscape} {}
   
-  ${theme.mediaQueries.laptop} {}
+  ${theme.mediaQueries.laptop} {
+    flex-direction: row;
+    justify-content: space-between;}
 `;
 
 export const DivBox = styled.div`
@@ -83,11 +82,11 @@ export const DivBox = styled.div`
   
   ${theme.mediaQueries.tabletPortrait} {}
   
-  ${theme.mediaQueries.tabletLandscape} {
+  ${theme.mediaQueries.tabletLandscape} {}
+  
+  ${theme.mediaQueries.laptop} {
     width: 275px;
   }
-  
-  ${theme.mediaQueries.laptop} {}
 `;
 
 export const DivBoxPanelHeading = styled.div`
