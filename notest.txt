@@ -1,10 +1,16 @@
-START DEVELOPMENT SERVER ON LINUX
+BUILD PRODUCTION
+cd ~/covid19
+npm run build
+
+START PRODUCTION SERVER
+cd ~/covid19
 nohup npm run start &
 
 TO KILL PROCESS
 "ps -aux"   to find id
 "kill"      to kill id
 
+----------
 
 npm install -g npm-check-updates
 "ncu -u"    to check if dependencies to match the latest package version

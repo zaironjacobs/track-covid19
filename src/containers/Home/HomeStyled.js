@@ -66,7 +66,8 @@ export const DivBoxesWrapper = styled.div`
   
   ${theme.mediaQueries.laptop} {
     flex-direction: row;
-    justify-content: space-between;}
+    justify-content: space-between;
+  }
 `;
 
 export const DivBox = styled.div`
@@ -93,7 +94,6 @@ export const DivBoxPanelHeading = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 35px;
   color: ${theme.colors.white};
   background-color: ${props => props.color};

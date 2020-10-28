@@ -12,15 +12,15 @@
     "axios": "^0.21.0",
     "moment": "^2.29.1",
     "mongodb": "^3.6.2",
-    "next": "^9.5.5",
-    "next-images": "^1.6.0",
+    "next": "^10.0.0",
+    "next-images": "^1.6.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-select": "^3.1.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "file-loader": "^6.1.1",
+    "file-loader": "^6.2.0",
     "url-loader": "^4.1.1"
   }
 }
