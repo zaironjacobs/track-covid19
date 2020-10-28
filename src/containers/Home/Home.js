@@ -111,8 +111,6 @@ export default function Home({worldwideData, countriesData}) {
                             <DivCasesNumbers>{worldwideData ? worldwideData.active : '-'}</DivCasesNumbers>
                         </DivBox>
                     </DivBoxesWrapper>
-
-                    <DivLastUpdated>Last updated: {dateString}</DivLastUpdated>
                 </>
                 : null}
 
@@ -170,10 +168,10 @@ export default function Home({worldwideData, countriesData}) {
                             </DivCasesNumbers>
                         </DivBox>
                     </DivBoxesWrapper>
-
-                    <DivLastUpdated>Last updated: {dateString ? dateString : ''}</DivLastUpdated>
                 </>
                 : null}
+
+            <DivLastUpdated>Last updated: {dateString ? dateString : ''}</DivLastUpdated>
 
         </MainContainer>
     );
