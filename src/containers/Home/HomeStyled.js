@@ -139,6 +139,19 @@ export const DivLastUpdated = styled.div`
   ${theme.mediaQueries.laptop} {}
 `;
 
+export const DivDataSource = styled.div`
+  text-align: center;
+  margin-top: 10px;
+  
+  ${theme.mediaQueries.mobileLandscape} {}
+  
+  ${theme.mediaQueries.tabletPortrait} {}
+  
+  ${theme.mediaQueries.tabletLandscape} {}
+  
+  ${theme.mediaQueries.laptop} {}
+`;
+
 export const ButtonToggleWrapper = styled.div`
   width: 100%;
   text-align: center;

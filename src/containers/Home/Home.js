@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {
     MainContainer, DivBoxesWrapper, DivBox, DivBoxPanelHeading, H1Country, DivCasesNumbers,
-    DivTopIconWrapper, DivLastUpdated, ButtonToggle, ButtonToggleWrapper, SelectWrapper
+    DivTopIconWrapper, DivLastUpdated, ButtonToggle, ButtonToggleWrapper, SelectWrapper, DivDataSource
 } from './HomeStyled';
 import global from 'global';
 import Head from 'next/head';
@@ -172,6 +172,9 @@ export default function Home({worldwideData, countriesData}) {
                 : null}
 
             <DivLastUpdated>Last updated: {dateString ? dateString : ''}</DivLastUpdated>
+            <DivDataSource>
+                Data gathered from Johns Hopkins University Center for Systems Science and Engineering
+            </DivDataSource>
 
         </MainContainer>
     );
