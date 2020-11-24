@@ -9,7 +9,7 @@ export default function Home({worldwideData, countriesData}) {
 }
 
 export const getServerSideProps = async () => {
-    const apiUrl = process.env.DJANGO_API_URL;
+    const apiUrl = process.env.COVID19_API_URL;
 
     let countriesData = null
     await axios.get(apiUrl + '/countries')
@@ -24,7 +24,7 @@ export const getServerSideProps = async () => {
     }
 
     let worldwideData = null
-    await axios.get(apiUrl + '/country?country=Worldwide')
+    await axios.get(apiUrl + '/country?name=Worldwide')
         .then((res) => {
             worldwideData = res.data
         })
