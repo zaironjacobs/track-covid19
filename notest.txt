@@ -9,9 +9,3 @@ nohup npm run start &
 TO KILL PROCESS
 "ps -aux"   to find id
 "kill"      to kill id
-
-----------
-
-npm install -g npm-check-updates
-"ncu -u"    to check if dependencies to match the latest package version
-"ncu"       to update dependencies to match the latest package version
