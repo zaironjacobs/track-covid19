@@ -2,17 +2,14 @@ import styled, {createGlobalStyle} from 'styled-components';
 import theme from 'theme/theme';
 
 export const GlobalStyles = createGlobalStyle`
-  html, body {
+  body {
     margin: 0;
     padding: 0;
-  }
-  
-  body {
     background-color: ${theme.colors.white};
     text-rendering: optimizeLegibility;
     font-family: ${theme.fonts.roboto}, sans-serif;
     color: ${theme.colors.black};
-    font-weight: 200;
+    font-weight: 300;
   }
 
   *, *::after, *::before {

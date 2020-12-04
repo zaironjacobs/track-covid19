@@ -38,10 +38,10 @@ export default function MyApp({Component, pageProps}) {
                 <link
                     href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
                     rel='stylesheet'/>
-                <link
-                    rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
-                    integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
-                    crossOrigin='anonymous'/>
+                <link rel="stylesheet"
+                      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+                      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+                      crossOrigin="anonymous"/>
             </Head>
             <ThemeProvider theme={Theme}>
                 <GlobalStyles/>
