@@ -11,7 +11,7 @@ const Footer = () => {
             <DivContent>
                 <DivInfoWrapper>
                     <DivCopyright>
-                        Made by Zairon Jacobs
+                        Built by Zairon Jacobs
                     </DivCopyright>
                     <DivGithubIconWrapper>
                         <Link href={'https://github.com/zaironjacobs'}>

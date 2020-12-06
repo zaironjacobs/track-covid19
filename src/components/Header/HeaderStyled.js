@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import theme from 'theme/theme';
 
 export const HeaderContainer = styled.header`
+  z-index: 9999;
   height: ${theme.heights.mobileHeader};
   margin: 0 auto;
   position: sticky;
