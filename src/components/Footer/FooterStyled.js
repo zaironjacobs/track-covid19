@@ -38,7 +38,7 @@ export const DivContent = styled.div`
   ${theme.mediaQueries.laptop} {}
 `;
 
-export const DivCopyright = styled.div`
+export const DivBuiltBy = styled.div`
   color: ${theme.colors.black};
   font-size: ${theme.fontSizes.superSmall};
   
@@ -67,7 +67,7 @@ export const DivInfoWrapper = styled.div`
 `;
 
 export const DivGithubIconWrapper = styled.div`
-  margin-top: 10px;
+  margin-bottom: 10px;
   
   .github-icon {
     color: black;
