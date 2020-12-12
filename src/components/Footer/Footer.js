@@ -12,11 +12,13 @@ const Footer = () => {
                 <DivInfoWrapper>
                     <DivGithubIconWrapper>
                         <Link href={'https://github.com/zaironjacobs'}>
-                            <a><i aria-label='github' className='fab fa-github github-icon'/></a>
+                            <a target='_blank'><i aria-label='github' className='fab fa-github github-icon'/></a>
                         </Link>
                     </DivGithubIconWrapper>
                     <DivBuiltBy>
-                        Built by Zairon Jacobs
+                        <Link href={'https://zaironjacobs.com'}>
+                            <a target='_blank'>Built by Zairon Jacobs</a>
+                        </Link>
                     </DivBuiltBy>
                 </DivInfoWrapper>
             </DivContent>

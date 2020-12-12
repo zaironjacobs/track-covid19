@@ -1,5 +1,5 @@
 import React from 'react';
-import {HeaderContainer, DivContent, DivLogoWrapper, DivLogo} from './HeaderStyled';
+import {HeaderContainer, DivContent, DivLogoWrapper, DivLogo, ImgCoronavirusIcon} from './HeaderStyled';
 import Link from 'next/link';
 import coronavirusIcon from 'assets/images/coronavirus.svg';
 
@@ -9,7 +9,9 @@ const Header = () => {
             <DivContent>
                 <DivLogoWrapper>
                     <Link href='/'>
-                        <a><img src={coronavirusIcon} className='coronavirus-icon' alt='coronavirus'/></a>
+                        <a>
+                            <ImgCoronavirusIcon src={coronavirusIcon} alt='coronavirus'/>
+                        </a>
                     </Link>
                     <DivLogo>
                         <Link href='/'><a>Track COVID-19</a></Link>

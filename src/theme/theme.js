@@ -41,10 +41,9 @@ export default {
     },
 
     mediaQueries: {
-        /* mobilePortrait: 'DEFAULT', */
-        mobileLandscape: '@media (min-width: 480px)',
-        tabletPortrait: '@media (min-width: 768px)',
-        tabletLandscape: '@media (min-width: 992px)',
-        laptop: '@media (min-width: 1200px)'
+        mq_480px: '@media (min-width: 480px)',
+        mq_768px: '@media (min-width: 768px)',
+        mq_992px: '@media (min-width: 992px)',
+        mq_1200px: '@media (min-width: 1200px)'
     }
 };

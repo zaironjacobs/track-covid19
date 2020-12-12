@@ -32,17 +32,17 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   h1 {
-    ${theme.mediaQueries.mobileLandscape} {
+    ${theme.mediaQueries.mq_480px} {
       font-size:  ${theme.fontSizes.medium};
     }
   
-    ${theme.mediaQueries.tabletPortrait} {
+    ${theme.mediaQueries.mq_768px} {
       font-size: ${theme.fontSizes.large};
     }
   
-    ${theme.mediaQueries.tabletLandscape} {}
+    ${theme.mediaQueries.mq_992px} {}
   
-    ${theme.mediaQueries.laptop} {}
+    ${theme.mediaQueries.mq_1200px} {}
   }
   
   p {
@@ -59,15 +59,15 @@ export const Main = styled.main`
   width: 100%;
   padding: 5px 0 25px 0;
     
-  ${theme.mediaQueries.mobileLandscape} {}
+  ${theme.mediaQueries.mq_480px} {}
   
-  ${theme.mediaQueries.tabletPortrait} {}
+  ${theme.mediaQueries.mq_768px} {}
   
-  ${theme.mediaQueries.tabletLandscape} {
+  ${theme.mediaQueries.mq_992px} {
     padding: 20px 0 50px 0;
   }
   
-  ${theme.mediaQueries.laptop} {}
+  ${theme.mediaQueries.mq_1200px} {}
 `;
 
 export const ButtonDefault = styled.button`
@@ -89,29 +89,29 @@ export const ButtonDefault = styled.button`
     box-shadow: 0 0 41px -17px rgba(0,0,0,0.6);
   }
   
-  ${theme.mediaQueries.mobileLandscape} {}
+  ${theme.mediaQueries.mq_480px} {}
   
-  ${theme.mediaQueries.tabletPortrait} {
+  ${theme.mediaQueries.mq_768px} {
     height: 45px;
     width: 160px;
     font-size: 1.2rem;
   }
   
-  ${theme.mediaQueries.tabletLandscape} {}
+  ${theme.mediaQueries.mq_992px} {}
   
-  ${theme.mediaQueries.laptop} {}
+  ${theme.mediaQueries.mq_1200px} {}
 `
 
 
 export const DivApp = styled.div`
   
-  ${theme.mediaQueries.mobileLandscape} {}
+  ${theme.mediaQueries.mq_480px} {}
   
-  ${theme.mediaQueries.tabletPortrait} {}
+  ${theme.mediaQueries.mq_768px} {}
   
-  ${theme.mediaQueries.tabletLandscape} {}
+  ${theme.mediaQueries.mq_992px} {}
   
-  ${theme.mediaQueries.laptop} {}
+  ${theme.mediaQueries.mq_1200px} {}
 `;
 
 export const DivContent = styled.div`
@@ -122,25 +122,25 @@ export const DivContent = styled.div`
   padding-left: ${theme.paddings.contentDefault};
   padding-right: ${theme.paddings.contentDefault};
   
-  ${theme.mediaQueries.mobileLandscape} {}
+  ${theme.mediaQueries.mq_480px} {}
   
-  ${theme.mediaQueries.tabletPortrait} {}
+  ${theme.mediaQueries.mq_768px} {}
   
-  ${theme.mediaQueries.tabletLandscape} {
+  ${theme.mediaQueries.mq_992px} {
     min-height: calc(100vh - ${theme.heights.header} - ${theme.heights.footer});
     }
   
-  ${theme.mediaQueries.laptop} {}
+  ${theme.mediaQueries.mq_1200px} {}
 `;
 
 export const AnchorArrowUp = styled.a`
   display: none;
   
-  ${theme.mediaQueries.mobileLandscape} {}
+  ${theme.mediaQueries.mq_480px} {}
   
-  ${theme.mediaQueries.tabletPortrait} {}
+  ${theme.mediaQueries.mq_768px} {}
   
-  ${theme.mediaQueries.tabletLandscape} {
+  ${theme.mediaQueries.mq_992px} {
     display: block;
     position: fixed;
     right: 4%;
@@ -162,5 +162,5 @@ export const AnchorArrowUp = styled.a`
     transition: .4s linear;
   }
   
-  ${theme.mediaQueries.laptop} {}
+  ${theme.mediaQueries.mq_1200px} {}
 `;
