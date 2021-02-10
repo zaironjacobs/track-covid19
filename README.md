@@ -1,14 +1,14 @@
-<h1 style="text-align:center;">
+<h1 align="center">
 TRACK COVID-19
 </h1>
-<div style="text-align:center;">
+<div align="center">
 Next.js app to track <a href="https://covid19.zaironjacobs.com/" target="_blank">COVID-19 data</a>.
 </div>
 <br>
-<div style="text-align:center;">
-<img alt="covid19" src="https://i.imgur.com/7GLaNum.png" width="80%">
+<div align="center">
+<img alt="covid19" src="https://i.imgur.com/7GLaNum.png" width="90%">
 <br><br>
-<img alt="covid19" src="https://i.imgur.com/CrglbUY.png" width=80%">
+<img alt="covid19" src="https://i.imgur.com/CrglbUY.png" width=90%">
 </div>
 
 ## Dependencies
