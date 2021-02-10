@@ -1,5 +1,5 @@
 {
-  "name": "covid19",
+  "name": "track-covid19",
   "homepage": "",
   "version": "0.1.0",
   "private": true,
@@ -9,14 +9,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "moment": "^2.29.1",
-    "mongodb": "^3.6.3",
-    "next": "^10.0.3",
-    "next-images": "^1.6.2",
+    "mongodb": "^3.6.4",
+    "next": "^10.0.6",
+    "next-images": "^1.7.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-select": "^3.1.1",
+    "react-select": "^4.1.0",
     "styled-components": "^5.2.1"
   }
 }
