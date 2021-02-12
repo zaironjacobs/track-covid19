@@ -6,13 +6,13 @@ Next.js app to track <a href="https://covid19.zaironjacobs.com/" target="_blank"
 </div>
 <br>
 <div align="center">
-<img alt="covid19" src="https://i.imgur.com/7GLaNum.png" width="90%">
+<img alt="covid19" src="https://i.imgur.com/7GLaNum.png" width="95%">
 <br><br>
-<img alt="covid19" src="https://i.imgur.com/CrglbUY.png" width=90%">
+<img alt="covid19" src="https://i.imgur.com/CrglbUY.png" width=95%">
 </div>
 
 ## Dependencies
-- [COVID-19 Data Fetcher](https://github.com/zaironjacobs/covid19-data-fetcher-python/)
+- [COVID-19 Data Fetcher](https://github.com/zaironjacobs/covid19-data-fetcher/)
 - [COVID-19 API](https://github.com/zaironjacobs/covid19-api-fastapi/)
 
 
@@ -22,7 +22,6 @@ $ git clone https://github.com/zaironjacobs/track-covid19
 ```
 
 ## Usage
-
 Copy the file .env.example to .env and fill in the environment variables.
 Example:
 ```
