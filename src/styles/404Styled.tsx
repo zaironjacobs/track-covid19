@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import theme from 'theme/theme';
-import {Main} from 'theme/globalStyles';
+import theme from 'theme';
+import {Main} from '@style/GlobalStyle';
 
 export const MainContainer = styled(Main)`
   display: flex;
@@ -20,11 +20,11 @@ export const Div404 = styled.div`
   line-height: 1;
   text-transform: uppercase;
 
-  ${theme.mediaQueries.mq_768px} {
+  ${theme.media._768px} {
     font-size: 8rem;
   }
 
-  ${theme.mediaQueries.mq_1200px} {
+  ${theme.media._1200px} {
     font-size: 10rem;
   }
 `;
@@ -34,12 +34,12 @@ export const DivPageNotFound = styled.div`
   margin-bottom: 0.5rem;
   text-transform: uppercase;
 
-  ${theme.mediaQueries.mq_768px} {
+  ${theme.media._768px} {
     margin-bottom: 1rem;
     font-size: ${theme.fontSizes.medium};
   }
 
-  ${theme.mediaQueries.mq_1200px} {
+  ${theme.media._1200px} {
     font-size: ${theme.fontSizes.extraLarge};
   }
 `;

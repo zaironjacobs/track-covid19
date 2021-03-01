@@ -1,4 +1,12 @@
 export default {
+
+    media: {
+        _480px: '@media (min-width: 480px)',
+        _768px: '@media (min-width: 768px)',
+        _992px: '@media (min-width: 992px)',
+        _1200px: '@media (min-width: 1200px)'
+    },
+
     colors: {
         black: '#000000',
         white: '#ffffff',
@@ -28,22 +36,6 @@ export default {
     heights: {
         mobileHeader: '55px',
         header: '85px',
-        mobileFooter: '100px',
         footer: '100px'
-    },
-
-    widths: {
-        contentDefault: '1366px'
-    },
-
-    paddings: {
-        contentDefault: '15px'
-    },
-
-    mediaQueries: {
-        mq_480px: '@media (min-width: 480px)',
-        mq_768px: '@media (min-width: 768px)',
-        mq_992px: '@media (min-width: 992px)',
-        mq_1200px: '@media (min-width: 1200px)'
     }
 };
