@@ -36,10 +36,12 @@ const Index = ({worldwideData, countriesData, articlesData}) => {
     }
 
     // Article date format to string
-    articlesData.forEach(article => {
-        const date: Date = new Date(article.published_at);
-        article.published_at = moment(date).format('MMMM D, YYYY');
-    });
+    if (articlesData !== null) {
+        articlesData.forEach(article => {
+            const date: Date = new Date(article.published_at);
+            article.published_at = moment(date).format('MMMM D, YYYY');
+        });
+    }
 
 
     // Custom styles for Select
@@ -203,7 +205,7 @@ const Index = ({worldwideData, countriesData, articlesData}) => {
                     <div className='news-box'>
 
                         {/* News */}
-                        {articlesData.map((article, index) => (
+                        {articlesData !== null && articlesData.map((article, index) => (
                             <div key={index} className='news'>
                                 <div className='title'><Link href={article.url}>{article.title}</Link></div>
                                 <p className='description'>{article.description}</p>
@@ -211,6 +213,7 @@ const Index = ({worldwideData, countriesData, articlesData}) => {
                                 <p className='published-date'>{article.published_at}</p>
                             </div>
                         ))}
+
 
                     </div>
                 </LatestNews>

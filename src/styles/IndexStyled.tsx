@@ -156,13 +156,15 @@ export const Info = styled.div`
 
 export const LatestNews = styled.div`
   margin: 50px 0 0 0;
-  max-width: 95%;
+  max-width: 700px;
+  width: 95%;
   border: 1px solid ${theme.colors.lightGrey};
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 
   ${theme.media._768px} {
-    max-width: 700px;
+    max-width: 750px;
+    width: 100%;
   }
 
   .heading {
