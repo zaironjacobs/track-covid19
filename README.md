@@ -6,9 +6,7 @@ Next.js app to track <a href="https://covid19.zaironjacobs.com/" target="_blank"
 </div>
 <br>
 <div align="center">
-<img alt="covid19" src="https://i.imgur.com/7GLaNum.png" width="95%">
-<br><br>
-<img alt="covid19" src="https://i.imgur.com/CrglbUY.png" width=95%">
+<img alt="covid19" src="https://i.imgur.com/cuQRuFW.png" width="95%">
 </div>
 
 ## Dependencies
