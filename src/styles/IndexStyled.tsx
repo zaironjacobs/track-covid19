@@ -21,17 +21,19 @@ export const ToggleWrapper = styled.div`
 
 
 export const WorldIconWrapper = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
+  height: auto;
 
   img {
     width: 75px;
+    height: auto;
   }
 
   ${theme.media._1200px} {
     img {
       width: 140px;
-      height: 100%;
     }
   }
 `;
