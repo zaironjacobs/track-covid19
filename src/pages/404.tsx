@@ -1,5 +1,5 @@
 import React from 'react';
-import {Div404, Div404Wrapper, DivPageNotFound, MainContainer} from '@style/404Styled';
+import {NotFoundWrapper, MainContainer} from '@style/404Styled';
 import Head from 'next/head';
 import global from 'global';
 
@@ -11,10 +11,10 @@ function Custom404() {
                     <title>Page not found – {global.siteName}</title>
                     <meta name='description' content='page not found'/>
                 </Head>
-                <Div404Wrapper>
-                    <Div404>404</Div404>
-                    <DivPageNotFound>Page Not Found</DivPageNotFound>
-                </Div404Wrapper>
+                <NotFoundWrapper>
+                    <div className='not-found-404'>404</div>
+                    <div className="not-found-wrapper">Page Not Found</div>
+                </NotFoundWrapper>
             </MainContainer>
         </>
     );
