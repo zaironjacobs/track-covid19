@@ -201,7 +201,6 @@ export const LatestNews = styled.div`
       border-bottom: none;
       margin-bottom: 0;
     }
-
   }
 
   .title {
@@ -219,7 +218,7 @@ export const LatestNews = styled.div`
   .source-name {
     font-size: ${theme.fontSizes.extraSmall};
     margin: 3px 0 3px 0;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .published-date {

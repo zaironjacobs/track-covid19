@@ -38,7 +38,7 @@ const Index = ({worldwideData, countriesData, articlesData}) => {
     // Article date format to string
     articlesData.forEach(article => {
         const date: Date = new Date(article.published_at);
-        article.published_at = moment(date).format('DD MMM YYYY HH:mm');
+        article.published_at = moment(date).format('MMMM D, YYYY');
     });
 
 
