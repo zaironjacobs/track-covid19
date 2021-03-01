@@ -164,6 +164,7 @@ export const LatestNews = styled.div`
   border: 1px solid ${theme.colors.lightGrey};
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 115, 235, .07);
 
   ${theme.media._768px} {
     max-width: 750px;
