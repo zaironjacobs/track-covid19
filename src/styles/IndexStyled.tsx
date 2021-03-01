@@ -23,11 +23,9 @@ export const ToggleWrapper = styled.div`
 export const WorldIconWrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
 
   img {
     width: 75px;
-    height: 100%;
   }
 
   ${theme.media._1200px} {
