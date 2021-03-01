@@ -5,6 +5,7 @@
     "paths": {
       "@style/*": ["styles/*"],
       "@component/*": ["components/*"],
+      "@interface/*": ["interfaces/*"]
     },
     "lib": [
       "dom",

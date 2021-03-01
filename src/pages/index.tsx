@@ -9,18 +9,22 @@ import Link from 'next/link';
 import Select from 'react-select';
 import moment from 'moment';
 import theme from 'theme';
+import Article from '@interface/article';
+import Country from '@interface/country';
+import SelectValue from '@interface/selectValue';
+import IndexProp from '@interface/indexProp';
 
 
-const Index = ({worldwideData, countriesData, articlesData}) => {
+const Index = ({worldwideData, countriesData, articlesData}: IndexProp) => {
 
     const worldwideView: string = 'worldwideView';
     const countryView: string = 'countryView';
 
-    const [view, setView]: [string, Dispatch<string>] = useState(worldwideView);
-    const [selectedCountry, setSelectedCountry]: [any, Dispatch<string>] = useState(null);
+    const [view, setView] = useState(worldwideView);
+    const [selectedCountry, setSelectedCountry]: [SelectValue, Dispatch<any>] = useState(null);
 
     let fetchDateString: string = '';
-    let countries: any[] = [];
+    let countries: {}[] = [];
 
     // Set the date
     if (worldwideData !== null) {
@@ -30,19 +34,19 @@ const Index = ({worldwideData, countriesData, articlesData}) => {
 
     // Set countries data
     if (countriesData !== null) {
-        countriesData.forEach(country => {
-            countries.push({value: country, label: country.name})
+        countriesData.forEach((country: Country) => {
+            const value: SelectValue = {value: country, label: country.name};
+            countries.push(value);
         });
     }
 
     // Article date format to string
     if (articlesData !== null) {
-        articlesData.forEach(article => {
+        articlesData.forEach((article: Article) => {
             const date: Date = new Date(article.published_at);
             article.published_at = moment(date).format('MMMM D, YYYY');
         });
     }
-
 
     // Custom styles for Select
     const selectCustomStyles: {} = {
@@ -137,6 +141,7 @@ const Index = ({worldwideData, countriesData, articlesData}) => {
                             <img src='images/country_search.svg' alt='Country Magnify' className='top-icon'/>
                         </WorldIconWrapper>
 
+                        {/* Select */}
                         <SelectWrapper>
                             <Select placeholder='Select a Country...'
                                     className='select-box'
@@ -146,7 +151,7 @@ const Index = ({worldwideData, countriesData, articlesData}) => {
                             />
                         </SelectWrapper>
 
-                        <h1>{selectedCountry != null ? selectedCountry.value.name : ''}</h1>
+                        <h1>{selectedCountry !== null ? selectedCountry.value.name : ''}</h1>
 
                         {/* Boxes */}
                         <BoxesWrapper>
@@ -205,7 +210,7 @@ const Index = ({worldwideData, countriesData, articlesData}) => {
                     <div className='news-box'>
 
                         {/* News */}
-                        {articlesData !== null && articlesData.map((article, index) => (
+                        {articlesData !== null && articlesData.map((article: Article, index: number) => (
                             <div key={index} className='news'>
                                 <div className='title'><Link href={article.url}>{article.title}</Link></div>
                                 <p className='description'>{article.description}</p>
@@ -213,7 +218,6 @@ const Index = ({worldwideData, countriesData, articlesData}) => {
                                 <p className='published-date'>{article.published_at}</p>
                             </div>
                         ))}
-
 
                     </div>
                 </LatestNews>
@@ -229,7 +233,7 @@ export default Index;
 export const getServerSideProps = async () => {
     const apiUrl: string = process.env.NEXT_PUBLIC_COVID19_API_URL;
 
-    let countriesData: any[] = null;
+    let countriesData: Country[] = null;
     await axios.get(apiUrl + '/countries')
         .then((res: AxiosResponse) => {
             countriesData = res.data;
@@ -238,10 +242,10 @@ export const getServerSideProps = async () => {
             console.log(err);
         });
     if (countriesData !== null) {
-        countriesData = countriesData.filter((item) => item.name !== 'Worldwide');
+        countriesData = countriesData.filter((item: Country) => item.name !== 'Worldwide');
     }
 
-    let worldwideData: [] = null;
+    let worldwideData: Country = null;
     await axios.get(apiUrl + '/country?name=Worldwide')
         .then((res: AxiosResponse) => {
             worldwideData = res.data;
@@ -250,7 +254,7 @@ export const getServerSideProps = async () => {
             console.log(err);
         });
 
-    let articlesData: [] = null;
+    let articlesData: Article[] = null;
     await axios.get(apiUrl + '/articles')
         .then((res: AxiosResponse) => {
             articlesData = res.data;
