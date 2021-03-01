@@ -13,10 +13,6 @@ export const Content = styled.div`
   align-items: center;
 
   .built-by {
-    a {
-      color: ${theme.colors.black};
-      font-size: ${theme.fontSizes.superSmall};
-    }
   }
 
   .github-icon-wrapper {

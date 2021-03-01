@@ -1,15 +1,17 @@
-import React, {useState, Dispatch} from 'react';
+import React, {Dispatch, useState} from 'react';
 import axios, {AxiosResponse} from 'axios';
 import {
-    Toggle, ToggleWrapper, BoxesWrapper, BoxPanelHeading, Info, WorldIconWrapper, MainContainer, SelectWrapper
+    BoxesWrapper, BoxPanelHeading, Info, LatestNews, MainContainer, SelectWrapper, Toggle, ToggleWrapper,
+    WorldIconWrapper
 } from '@style/IndexStyled';
 import Header from '@component/Header';
+import Link from 'next/link';
 import Select from 'react-select';
 import moment from 'moment';
 import theme from 'theme';
 
 
-const Index = ({worldwideData, countriesData}) => {
+const Index = ({worldwideData, countriesData, articlesData}) => {
 
     const worldwideView: string = 'worldwideView';
     const countryView: string = 'countryView';
@@ -17,21 +19,28 @@ const Index = ({worldwideData, countriesData}) => {
     const [view, setView]: [string, Dispatch<string>] = useState(worldwideView);
     const [selectedCountry, setSelectedCountry]: [any, Dispatch<string>] = useState(null);
 
-    let dateString: string = '';
+    let fetchDateString: string = '';
     let countries: any[] = [];
 
     // Set the date
     if (worldwideData !== null) {
-        const date = new Date(worldwideData.last_updated_by_source_at);
-        dateString = moment(date).format('ddd MMM DD YYYY HH:mm');
+        const date: Date = new Date(worldwideData.last_updated_by_source_at);
+        fetchDateString = moment(date).format('ddd MMM DD YYYY HH:mm');
     }
 
     // Set countries data
     if (countriesData !== null) {
-        countriesData.forEach(function (country) {
+        countriesData.forEach(country => {
             countries.push({value: country, label: country.name})
         });
     }
+
+    // Article date format to string
+    articlesData.forEach(article => {
+        const date: Date = new Date(article.published_at);
+        article.published_at = moment(date).format('DD MMM YYYY HH:mm');
+    });
+
 
     // Custom styles for Select
     const selectCustomStyles: {} = {
@@ -43,7 +52,7 @@ const Index = ({worldwideData, countriesData}) => {
             ...styles,
             cursor: 'pointer',
         })
-    }
+    };
 
     // Toggle the view
     const toggleView: {} = () => {
@@ -52,7 +61,7 @@ const Index = ({worldwideData, countriesData}) => {
         } else {
             setView(worldwideView);
         }
-    }
+    };
 
 
     return (
@@ -181,12 +190,30 @@ const Index = ({worldwideData, countriesData}) => {
                 {/* Info */}
                 <Info>
                     <div className='last-updated'>
-                        Last updated: {dateString ? dateString : ''}
+                        Last updated: {fetchDateString ? fetchDateString : ''}
                     </div>
                     <div className='data-source'>
                         Data gathered from Johns Hopkins University Center for Systems Science and Engineering
                     </div>
                 </Info>
+
+                {/* Latest News */}
+                <LatestNews>
+                    <div className='heading'>Latest News</div>
+                    <div className='news-box'>
+
+                        {/* News */}
+                        {articlesData.map((article, index) => (
+                            <div key={index} className='news'>
+                                <div className='title'><Link href={article.url}>{article.title}</Link></div>
+                                <p className='description'>{article.description}</p>
+                                <p className='source-name'>{article.source_name}</p>
+                                <p className='published-date'>{article.published_at}</p>
+                            </div>
+                        ))}
+
+                    </div>
+                </LatestNews>
 
             </MainContainer>
         </>
@@ -220,7 +247,16 @@ export const getServerSideProps = async () => {
             console.log(err);
         });
 
+    let articlesData: [] = null;
+    await axios.get(apiUrl + '/articles')
+        .then((res: AxiosResponse) => {
+            articlesData = res.data;
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
     return {
-        props: {worldwideData, countriesData}
+        props: {worldwideData, countriesData, articlesData}
     }
 }

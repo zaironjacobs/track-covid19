@@ -13,6 +13,7 @@ export default {
         denimBlue: '#2944BA',
         royalBlueLight: '#536CD9',
         lightGrey: '#D6D6D6',
+        raisinBlack: '#2e2e3a',
 
         casesBoxRed: '#FF443B',
         casesBoxGreen: '#00CC19',
@@ -25,12 +26,11 @@ export default {
     },
 
     fontSizes: {
-        superSmall: '1rem',
-        extraSmall: '1.25rem',
-        small: '1.5rem',
-        medium: '2rem',
-        large: '2.5rem',
-        extraLarge: '3rem'
+        extraSmall: '1rem',
+        small: '1.2rem',
+        medium: '1.8rem',
+        large: '2rem',
+        extraLarge: '2.5rem'
     },
 
     heights: {

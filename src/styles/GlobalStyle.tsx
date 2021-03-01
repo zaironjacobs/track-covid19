@@ -47,8 +47,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${theme.colors.white};
+    color: ${theme.colors.black};
     text-decoration: none;
+    transition: .3s;
+
+    :hover {
+      color: ${theme.colors.royalBlueLight};
+    }
   }
 `;
 
@@ -58,7 +63,7 @@ export const Main = styled.main`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding: 0 8px 25px 8px;
+  padding: 0 8px 50px 8px;
   min-height: calc(100vh - ${theme.heights.mobileHeader} - ${theme.heights.footer});
 
   ${theme.media._992px} {

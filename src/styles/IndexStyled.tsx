@@ -115,7 +115,7 @@ export const Toggle = styled.button`
   color: white;
   background: ${theme.colors.denimBlue};
   border: none;
-  font-size: 1rem;
+  font-size: ${theme.fontSizes.extraSmall};
   height: 40px;
   width: 350px;
   border-radius: 4px;
@@ -132,17 +132,17 @@ export const Toggle = styled.button`
   ${theme.media._768px} {
     height: 45px;
     width: 350px;
-    font-size: 1.2rem;
+    font-size: ${theme.fontSizes.small};
   }
 `;
 
 
 export const Info = styled.div`
-  margin-top: 25px;
+  margin-top: 15px;
   padding: 0 10px 0 10px;
 
   ${theme.media._1200px} {
-    margin-top: 75px;
+    margin-top: 50px;
   }
 
   .last-updated {
@@ -155,4 +155,77 @@ export const Info = styled.div`
   }
 `;
 
+
+export const LatestNews = styled.div`
+  margin: 50px 0 0 0;
+  max-width: 95%;
+  border: 1px solid ${theme.colors.lightGrey};
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  ${theme.media._768px} {
+    max-width: 700px;
+  }
+
+  .heading {
+    display: flex;
+    justify-content: center;
+    font-size: ${theme.fontSizes.small};
+    border-bottom: 1px solid ${theme.colors.lightGrey};
+    background-color: ${theme.colors.raisinBlack};
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    font-weight: 400;
+  }
+
+  .news-box {
+    height: 400px;
+    overflow: scroll;
+  }
+
+  .news {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 0 20px 15px 20px;
+    border-bottom: 1px solid ${theme.colors.lightGrey};
+
+    :first-child {
+      margin-top: 15px;
+    }
+
+    :last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+  }
+
+  .title {
+    font-size: ${theme.fontSizes.small};
+    font-weight: 400;
+    margin-bottom: 3px;
+  }
+
+  .description {
+    font-size: ${theme.fontSizes.extraSmall};
+    margin: 3px 0 15px 0;
+    font-weight: 300;
+  }
+
+  .source-name {
+    font-size: ${theme.fontSizes.extraSmall};
+    margin: 3px 0 3px 0;
+    font-weight: 300;
+  }
+
+  .published-date {
+    font-size: ${theme.fontSizes.extraSmall};
+    margin: 3px 0 3px 0;
+    font-weight: 300;
+  }
+`;
 

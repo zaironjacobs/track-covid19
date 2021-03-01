@@ -30,11 +30,9 @@ export const NotFoundWrapper = styled.div`
 
   .page-not-found {
     font-size: ${theme.fontSizes.small};
-    margin-bottom: 0.5rem;
     text-transform: uppercase;
 
     ${theme.media._768px} {
-      margin-bottom: 1rem;
       font-size: ${theme.fontSizes.medium};
     }
 
