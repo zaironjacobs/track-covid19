@@ -44,7 +44,7 @@ const Index = ({worldwideData, countriesData, articlesData}: IndexProp) => {
     if (articlesData !== null) {
         articlesData.forEach((article: Article) => {
             const date: Date = new Date(article.published_at);
-            article.published_at = moment(date).format('MMMM D, YYYY');
+            article.published_at = moment(date).format('MMMM DD, YYYY HH:mm');
         });
     }
 
