@@ -222,7 +222,7 @@ export const LatestNews = styled.div`
   }
 
   .published-date {
-    font-size: ${theme.fontSizes.extraSmall};
+    font-size: 0.8rem;
     margin: 3px 0 3px 0;
     font-weight: 300;
   }

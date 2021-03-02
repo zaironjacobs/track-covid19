@@ -29,7 +29,7 @@ const Index = ({worldwideData, countriesData, articlesData}: IndexProp) => {
     // Set the date
     if (worldwideData !== null) {
         const date: Date = new Date(worldwideData.last_updated_by_source_at);
-        fetchDateString = moment(date).format('ddd MMM DD YYYY HH:mm');
+        fetchDateString = moment(date).utc().format('MMMM D, YYYY, h:mm A UTC');
     }
 
     // Set countries data
@@ -44,7 +44,7 @@ const Index = ({worldwideData, countriesData, articlesData}: IndexProp) => {
     if (articlesData !== null) {
         articlesData.forEach((article: Article) => {
             const date: Date = new Date(article.published_at);
-            article.published_at = moment(date).format('MMMM DD, YYYY HH:mm');
+            article.published_at = moment(date).format('MMMM D, YYYY, h:mm A UTC');
         });
     }
 
