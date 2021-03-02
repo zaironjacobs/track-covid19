@@ -104,10 +104,6 @@ export const SelectWrapper = styled.div`
     ${theme.media._992px} {
       width: 50%
     }
-
-    ${theme.media._992px} {
-      margin-top: 35px;
-    }
 `;
 
 
