@@ -20,6 +20,41 @@ export const ToggleWrapper = styled.div`
 `;
 
 
+export const Toggle = styled.button`
+  cursor: pointer;
+  color: white;
+  background: ${theme.colors.denimBlue};
+  border: none;
+  height: 40px;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 18px;
+
+  :hover {
+    background: ${theme.colors.royalBlueLight};
+    -webkit-box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
+  }
+
+  ${theme.media._768px} {
+    height: 45px;
+    width: 350px;
+  }
+`;
+
+
+export const Title = styled.div`
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin: 15px 0 15px 0;
+`;
+
+
 export const WorldIconWrapper = styled.div`
   width: 100%;
   height: auto;
@@ -55,7 +90,8 @@ export const BoxesWrapper = styled.div`
 
   .box {
     border: 1px solid #f1f1f1;
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     height: 150px;
     text-align: center;
     margin: 0 10px 35px 10px;
@@ -73,8 +109,8 @@ export const BoxesWrapper = styled.div`
     align-items: center;
     justify-content: center;
     height: 115px;
-    font-size: ${theme.fontSizes.medium};
     font-weight: 400;
+    font-size: 28px;
   }
 `;
 
@@ -89,6 +125,7 @@ export const BoxPanelHeading = styled.div`
   font-weight: 400;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  font-size: 20px;
 `;
 
 
@@ -104,33 +141,6 @@ export const SelectWrapper = styled.div`
     ${theme.media._992px} {
       width: 50%
     }
-`;
-
-
-export const Toggle = styled.button`
-  cursor: pointer;
-  color: white;
-  background: ${theme.colors.denimBlue};
-  border: none;
-  font-size: ${theme.fontSizes.extraSmall};
-  height: 40px;
-  width: 350px;
-  border-radius: 4px;
-  outline: none;
-  transition: 0.3s;
-
-  :hover {
-    background: ${theme.colors.royalBlueLight};
-    -webkit-box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
-  }
-
-  ${theme.media._768px} {
-    height: 45px;
-    width: 350px;
-    font-size: ${theme.fontSizes.small};
-  }
 `;
 
 
@@ -170,7 +180,6 @@ export const LatestNews = styled.div`
   .heading {
     display: flex;
     justify-content: center;
-    font-size: ${theme.fontSizes.small};
     border-bottom: 1px solid ${theme.colors.lightGrey};
     background-color: ${theme.colors.raisinBlack};
     border-top-left-radius: 10px;
@@ -179,6 +188,7 @@ export const LatestNews = styled.div`
     margin: 0;
     padding: 10px 0 10px 0;
     font-weight: 400;
+    font-size: 20px;
   }
 
   .news-box {
@@ -204,19 +214,17 @@ export const LatestNews = styled.div`
   }
 
   .title {
-    font-size: ${theme.fontSizes.small};
     font-weight: 400;
     margin-bottom: 3px;
+    font-size: 20px;
   }
 
   .description {
-    font-size: ${theme.fontSizes.extraSmall};
     margin: 3px 0 15px 0;
     font-weight: 300;
   }
 
   .source-name {
-    font-size: ${theme.fontSizes.extraSmall};
     margin: 3px 0 3px 0;
     font-weight: 400;
   }

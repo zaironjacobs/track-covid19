@@ -9,14 +9,12 @@ const Header = () => {
             <Content>
                 <div className='logo-wrapper'>
                     <Link href='/'>
-                        <a>
-                            <div className='virus-icon-wrapper'>
-                                <img src='/images/coronavirus.svg' alt='coronavirus'/>
-                            </div>
-                        </a>
+                        <div className='virus-icon-wrapper'>
+                            <img src='/images/coronavirus.svg' alt='coronavirus'/>
+                        </div>
                     </Link>
                     <div className='name'>
-                        <Link href='/'><a>Track COVID-19</a></Link>
+                        <Link href='/'>Track COVID-19</Link>
                     </div>
                 </div>
             </Content>

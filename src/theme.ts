@@ -25,14 +25,6 @@ export default {
         roboto: 'roboto'
     },
 
-    fontSizes: {
-        extraSmall: '1rem',
-        small: '1.2rem',
-        medium: '1.8rem',
-        large: '2rem',
-        extraLarge: '2.5rem'
-    },
-
     heights: {
         mobileHeader: '55px',
         header: '85px',

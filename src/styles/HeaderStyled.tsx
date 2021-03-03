@@ -30,18 +30,16 @@ export const Content = styled.header`
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
+    font-size: 22px;
+
+    ${theme.media._768px} {
+      font-size: 32px;
+    }
 
     a {
-      font-size: ${theme.fontSizes.small};
       text-decoration: none;
       font-weight: 400;
       color: ${theme.colors.black};
-    }
-
-    ${theme.media._768px} {
-      a {
-        font-size: ${theme.fontSizes.large};
-      }
     }
 
     ${theme.media._992px} {

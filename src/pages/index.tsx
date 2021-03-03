@@ -1,7 +1,7 @@
 import React, {Dispatch, useState} from 'react';
 import axios, {AxiosResponse} from 'axios';
 import {
-    BoxesWrapper, BoxPanelHeading, Info, LatestNews, MainContainer, SelectWrapper, Toggle, ToggleWrapper,
+    BoxesWrapper, BoxPanelHeading, Info, LatestNews, MainContainer, SelectWrapper, Toggle, ToggleWrapper, Title,
     WorldIconWrapper
 } from '@style/IndexStyled';
 import Header from '@component/Header';
@@ -98,7 +98,7 @@ const Index = ({worldwideData, countriesData, articlesData}: IndexProp) => {
                             <img src='images/worldwide.svg' alt='world' className='top-icon'/>
                         </WorldIconWrapper>
 
-                        <h1>Worldwide</h1>
+                        <Title>Worldwide</Title>
 
                         {/* Boxes */}
                         <BoxesWrapper>
@@ -151,7 +151,7 @@ const Index = ({worldwideData, countriesData, articlesData}: IndexProp) => {
                             />
                         </SelectWrapper>
 
-                        <h1>{selectedCountry !== null ? selectedCountry.value.name : ''}</h1>
+                        <Title>{selectedCountry !== null ? selectedCountry.value.name : ''}</Title>
 
                         {/* Boxes */}
                         <BoxesWrapper>

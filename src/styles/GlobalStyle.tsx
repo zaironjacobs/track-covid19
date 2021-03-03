@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${theme.fonts.roboto}, sans-serif;
     color: ${theme.colors.black};
     font-weight: 300;
+    font-size: 16px;
   }
 
   *, *::after, *::before {
@@ -25,27 +26,6 @@ export const GlobalStyle = createGlobalStyle`
     background: ${theme.colors.royalBlueLight}; /* Gecko Browsers */
   }
 
-  h1, h2, h3 {
-    color: ${theme.colors.black};
-    font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    ${theme.media._480px} {
-      font-size: ${theme.fontSizes.medium};
-    }
-
-    ${theme.media._768px} {
-      font-size: ${theme.fontSizes.large};
-    }
-  }
-
-  p {
-    font-size: ${theme.fontSizes.extraSmall};
-  }
-
   a {
     color: ${theme.colors.black};
     text-decoration: none;
@@ -54,6 +34,10 @@ export const GlobalStyle = createGlobalStyle`
     :hover {
       color: ${theme.colors.royalBlueLight};
     }
+  }
+
+  img {
+    color: transparent;
   }
 `;
 

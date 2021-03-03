@@ -21,6 +21,11 @@ export const Content = styled.div`
     .github-icon {
       color: black;
       font-size: 25px;
+      transition: .3s;
+
+      :hover {
+        color: ${theme.colors.royalBlueLight};
+      }
     }
   }
 `;
