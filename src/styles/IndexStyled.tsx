@@ -51,7 +51,7 @@ export const Title = styled.div`
   font-weight: 400;
   text-transform: uppercase;
   font-size: 35px;
-  margin: 15px 0 15px 0;
+  margin: 35px 0;
 `;
 
 
