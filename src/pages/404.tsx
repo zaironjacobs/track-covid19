@@ -13,7 +13,7 @@ function Custom404() {
                 </Head>
                 <NotFoundWrapper>
                     <div className='not-found-404'>404</div>
-                    <div className="not-found-wrapper">Page Not Found</div>
+                    <div className='not-found-page'>Page Not Found</div>
                 </NotFoundWrapper>
             </MainContainer>
         </>

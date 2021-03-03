@@ -15,29 +15,29 @@ export const NotFoundWrapper = styled.div`
   align-items: center;
 
   .not-found-404 {
-    font-size: 5rem;
+    font-size: 100px;
     line-height: 1;
     text-transform: uppercase;
 
     ${theme.media._768px} {
-      font-size: 8rem;
+      font-size: 140px;
     }
 
     ${theme.media._1200px} {
-      font-size: 10rem;
+      font-size: 160px;
     }
   }
 
-  .page-not-found {
-    font-size: ${theme.fontSizes.small};
+  .not-found-page {
+    font-size: 20px;
     text-transform: uppercase;
 
     ${theme.media._768px} {
-      font-size: ${theme.fontSizes.medium};
+      font-size: 24px;
     }
 
     ${theme.media._1200px} {
-      font-size: ${theme.fontSizes.extraLarge};
+      font-size: 26px;
     }
   }
 `;
