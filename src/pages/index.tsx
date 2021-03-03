@@ -1,4 +1,4 @@
-import React, {Dispatch, useState} from 'react';
+import {Dispatch, useState} from 'react';
 import axios, {AxiosResponse} from 'axios';
 import {
     BoxesWrapper, BoxPanelHeading, Info, LatestNews, MainContainer, SelectWrapper, Toggle, ToggleWrapper, Title,

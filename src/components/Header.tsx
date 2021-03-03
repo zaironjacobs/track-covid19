@@ -1,4 +1,3 @@
-import React from 'react';
 import {Content} from '@style/HeaderStyled';
 import Link from 'next/link';
 

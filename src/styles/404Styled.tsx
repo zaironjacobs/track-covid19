@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import theme from 'theme';
 import {Main} from '@style/GlobalStyle';
 
+
 export const MainContainer = styled(Main)`
   display: flex;
   justify-content: center;
   min-height: calc(100vh - ${theme.heights.footer});
 `;
+
 
 export const NotFoundWrapper = styled.div`
   display: flex;
