@@ -6,7 +6,7 @@ Next.js app to track <a href="https://covid19.zaironjacobs.com/" target="_blank"
 </div>
 <br>
 <div align="center">
-<img alt="covid19" src="https://i.imgur.com/VI72ri1.png" width="95%">
+<img alt="covid19" src="https://i.imgur.com/yBnkj5v.png" width="95%">
 </div>
 
 ## Dependencies
@@ -20,7 +20,7 @@ $ git clone https://github.com/zaironjacobs/track-covid19
 ```
 
 ## Usage
-Copy the file .env.example to .env and fill in the environment variables.
+Copy the file .env.local.example to .env.local and fill in the environment variables.
 Example:
 ```
 COVID19_API_URL=http://127.0.0.1:8050

@@ -231,7 +231,7 @@ export default Index;
 
 
 export const getServerSideProps = async () => {
-    const apiUrl: string = process.env.NEXT_PUBLIC_COVID19_API_URL;
+    const apiUrl: string = process.env.COVID19_API_URL;
 
     let countriesData: Country[] = null;
     await axios.get(apiUrl + '/countries')

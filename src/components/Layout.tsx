@@ -6,6 +6,8 @@ import Footer from '@component/Footer';
 const Layout = ({children}) => {
     return (
         <>
+
+            {/* Head */}
             <Head>
                 <title>{global.siteName}</title>
                 <meta name='viewport' content='width=device-width, initial-scale=1'/>
@@ -19,8 +21,13 @@ const Layout = ({children}) => {
                     integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp'
                     crossOrigin='anonymous'/>
             </Head>
+
+            {/* Page content */}
             {children}
+
+            {/* Footer */}
             <Footer/>
+
         </>
     );
 }
