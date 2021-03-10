@@ -1,9 +1,6 @@
 <h1 align="center">
-TRACK COVID-19
+<a href="https://covid19.zaironjacobs.com/" target="_blank">TRACK COVID-19</a>
 </h1>
-<div align="center">
-Next.js app to track <a href="https://covid19.zaironjacobs.com/" target="_blank">COVID-19 data</a>.
-</div>
 <br>
 <div align="center">
 <img alt="covid19" src="https://i.imgur.com/yBnkj5v.png" width="95%">
