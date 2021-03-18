@@ -13,6 +13,7 @@ import Article from '@interface/article';
 import Country from '@interface/country';
 import SelectValue from '@interface/selectValue';
 import IndexProp from '@interface/indexProp';
+import {clearTimeout} from "timers";
 
 
 const Index = ({worldwideData, countriesData, articlesData}: IndexProp) => {
@@ -229,39 +230,51 @@ const Index = ({worldwideData, countriesData, articlesData}: IndexProp) => {
 
 export default Index;
 
-
 export const getServerSideProps = async () => {
     const apiUrl: string = process.env.COVID19_API_URL;
 
-    let countriesData: Country[] = null;
-    await axios.get(apiUrl + '/countries')
-        .then((res: AxiosResponse) => {
-            countriesData = res.data;
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-    if (countriesData !== null) {
-        countriesData = countriesData.filter((item: Country) => item.name !== 'Worldwide');
+    const fetchCountries = () => {
+        return axios.get(apiUrl + '/countries', {timeout: 3000})
+            .then((res: AxiosResponse) => {
+                let countriesData: Country[];
+                countriesData = res.data;
+                if (countriesData !== null) {
+                    countriesData = countriesData.filter((item: Country) => item.name !== 'Worldwide');
+                }
+                return countriesData;
+            })
+            .catch((error) => {
+                return [];
+            });
     }
 
-    let worldwideData: Country = null;
-    await axios.get(apiUrl + '/country?name=Worldwide')
-        .then((res: AxiosResponse) => {
-            worldwideData = res.data;
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    const fetchWorldwide = () => {
+        return axios.get(apiUrl + '/country?name=Worldwide', {timeout: 3000})
+            .then((res: AxiosResponse) => {
+                let worldwideData: Country;
+                worldwideData = res.data;
+                return worldwideData;
+            })
+            .catch((error) => {
+                return null;
+            });
+    }
 
-    let articlesData: Article[] = null;
-    await axios.get(apiUrl + '/articles')
-        .then((res: AxiosResponse) => {
-            articlesData = res.data;
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    const fetchArticles = () => {
+        return axios.get(apiUrl + '/articles', {timeout: 3000})
+            .then((res: AxiosResponse) => {
+                let articlesData: Article[];
+                articlesData = res.data;
+                return articlesData;
+            })
+            .catch((error) => {
+                return [];
+            });
+    }
+
+    const [countriesData, worldwideData, articlesData] = await Promise.all([
+        fetchCountries(), fetchWorldwide(), fetchArticles()
+    ]);
 
     return {
         props: {worldwideData, countriesData, articlesData}
