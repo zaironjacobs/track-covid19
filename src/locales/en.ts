@@ -4,7 +4,7 @@ export default {
     recovered: 'Recovered',
     active: 'Active',
     lastUpdated: 'Last updated',
-    dataSource: 'Data gathered from ',
+    dataSource: 'Data gathered from',
     latestNews: 'Latest News',
     worldwide: 'Worldwide',
     switchButtonCountry: 'Countries',

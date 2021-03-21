@@ -162,7 +162,7 @@ const Index = (props) => {
                         <BoxesWrapper>
                             <div className='box'>
                                 <BoxPanelHeading color={theme.colors.casesBoxYellow}>
-                                    Total Confirmed
+                                    {i18n.confirmed}
                                 </BoxPanelHeading>
                                 <div className='cases-numbers'>
                                     {selectedCountry ? selectedCountry.value.confirmed : '-'}
@@ -171,7 +171,7 @@ const Index = (props) => {
 
                             <div className='box'>
                                 <BoxPanelHeading color={theme.colors.casesBoxRed}>
-                                    Total Deaths
+                                    {i18n.deaths}
                                 </BoxPanelHeading>
                                 <div className='cases-numbers'>
                                     {selectedCountry ? selectedCountry.value.deaths : '-'}
@@ -180,7 +180,7 @@ const Index = (props) => {
 
                             <div className='box'>
                                 <BoxPanelHeading color={theme.colors.casesBoxGreen}>
-                                    Total Recovered
+                                    {i18n.recovered}
                                 </BoxPanelHeading>
                                 <div className='cases-numbers'>
                                     {selectedCountry ? selectedCountry.value.recovered : '-'}
@@ -189,7 +189,7 @@ const Index = (props) => {
 
                             <div className='box'>
                                 <BoxPanelHeading color={theme.colors.casesBoxBlue}>
-                                    Total Active
+                                    {i18n.active}
                                 </BoxPanelHeading>
                                 <div className='cases-numbers'>
                                     {selectedCountry ? selectedCountry.value.active : '-'}

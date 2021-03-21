@@ -1,9 +1,9 @@
 export default {
     deaths: 'Sterfgevallen',
-    confirmed: 'Besmettingen',
+    confirmed: 'Totaal Aantal Gevallen',
     recovered: 'Hersteld',
-    active: 'Actief',
-    lastUpdated: 'Laatst bijgewerkt',
+    active: 'Actieve gevallen',
+    lastUpdated: 'Laatst geüpdatet',
     dataSource: 'Bron van data',
     latestNews: 'Laatste Nieuws',
     worldwide: 'Wereldwijd',
