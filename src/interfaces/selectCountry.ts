@@ -1,9 +1,8 @@
 import Country from '@interface/country';
 
-interface SelectValue {
+interface SelectCountry {
     value: Country;
     label: string;
 }
 
-export default SelectValue;
-
+export default SelectCountry;

@@ -1,0 +1,12 @@
+export default {
+    deaths: 'Deaths',
+    confirmed: 'Confirmed',
+    recovered: 'Recovered',
+    active: 'Active',
+    lastUpdated: 'Last updated',
+    dataSource: 'Data gathered from ',
+    latestNews: 'Latest News',
+    worldwide: 'Worldwide',
+    switchButtonCountry: 'Countries',
+    switchButtonWorldwide: 'Worldwide',
+}

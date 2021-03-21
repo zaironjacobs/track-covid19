@@ -6,6 +6,8 @@ const Header = () => {
     return (
         <>
             <Content>
+
+                {/* Logo */}
                 <div className='logo-wrapper'>
                     <Link href='/'>
                         <div className='virus-icon-wrapper'>

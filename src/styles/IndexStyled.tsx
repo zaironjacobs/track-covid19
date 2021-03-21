@@ -26,7 +26,7 @@ export const Toggle = styled.button`
   background: ${theme.colors.denimBlue};
   border: none;
   height: 40px;
-  max-width: 350px;
+  max-width: 300px;
   width: 100%;
   border-radius: 4px;
   outline: none;
@@ -134,7 +134,7 @@ export const SelectWrapper = styled.div`
   width: 100%;
   text-align: center;
 
-  .select-box {
+  .select-country {
     width: 350px;
     margin: 0 auto;
 

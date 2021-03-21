@@ -28,6 +28,6 @@ export default {
     heights: {
         mobileHeader: '55px',
         header: '85px',
-        footer: '100px'
+        footer: '175px'
     }
 };

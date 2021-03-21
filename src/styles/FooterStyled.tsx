@@ -11,12 +11,13 @@ export const Content = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 25px 25px 25px 25px;
 
   .built-by {
   }
 
   .github-icon-wrapper {
-    margin-bottom: 10px;
+    margin: 25px 0 10px 0;
 
     .github-icon {
       color: black;
@@ -26,6 +27,30 @@ export const Content = styled.div`
       :hover {
         color: ${theme.colors.royalBlueLight};
       }
+    }
+  }
+
+  .select-language-wrapper {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+
+    ${theme.media._1200px} {
+      justify-content: flex-end;
+    }
+
+    .world-icon-wrapper {
+      margin-right: 10px;
+
+      i {
+        font-size: 20px;
+      }
+    }
+
+    .select-language {
+      max-width: 225px;
+      width: 100%;
     }
   }
 `;
