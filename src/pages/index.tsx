@@ -12,10 +12,13 @@ import theme from 'theme';
 import Article from '@interface/article';
 import Country from '@interface/country';
 import SelectCountry from '@interface/selectCountry';
+import {NextRouter, useRouter} from 'next/router';
 
 
 const Index = (props) => {
     const i18n = props.i18n;
+    const router: NextRouter = useRouter();
+    const {locale} = router;
 
     const worldwideData: Country = props.worldwideData;
     const articlesData: Article[] = props.articlesData;
@@ -110,29 +113,36 @@ const Index = (props) => {
                                 <BoxPanelHeading color={theme.colors.casesBoxYellow}>
                                     {i18n.confirmed}
                                 </BoxPanelHeading>
-
-                                <div className='cases-numbers'>{worldwideData ? worldwideData.confirmed : '-'}</div>
+                                <div className='cases-numbers'>
+                                    {worldwideData ? new Intl.NumberFormat(locale).format(worldwideData.confirmed) : '-'}
+                                </div>
                             </div>
 
                             <div className='box'>
                                 <BoxPanelHeading color={theme.colors.casesBoxRed}>
                                     {i18n.deaths}
                                 </BoxPanelHeading>
-                                <div className='cases-numbers'>{worldwideData ? worldwideData.deaths : '-'}</div>
+                                <div className='cases-numbers'>
+                                    {worldwideData ? new Intl.NumberFormat(locale).format(worldwideData.deaths) : '-'}
+                                </div>
                             </div>
 
                             <div className='box'>
                                 <BoxPanelHeading color={theme.colors.casesBoxGreen}>
                                     {i18n.recovered}
                                 </BoxPanelHeading>
-                                <div className='cases-numbers'>{worldwideData ? worldwideData.recovered : '-'}</div>
+                                <div className='cases-numbers'>
+                                    {worldwideData ? new Intl.NumberFormat(locale).format(worldwideData.recovered) : '-'}
+                                </div>
                             </div>
 
                             <div className='box'>
                                 <BoxPanelHeading color={theme.colors.casesBoxBlue}>
                                     {i18n.active}
                                 </BoxPanelHeading>
-                                <div className='cases-numbers'>{worldwideData ? worldwideData.active : '-'}</div>
+                                <div className='cases-numbers'>
+                                    {worldwideData ? new Intl.NumberFormat(locale).format(worldwideData.active) : '-'}
+                                </div>
                             </div>
                         </BoxesWrapper>
                     </>
@@ -165,7 +175,7 @@ const Index = (props) => {
                                     {i18n.confirmed}
                                 </BoxPanelHeading>
                                 <div className='cases-numbers'>
-                                    {selectedCountry ? selectedCountry.value.confirmed : '-'}
+                                    {selectedCountry ? new Intl.NumberFormat(locale).format(selectedCountry.value.confirmed) : '-'}
                                 </div>
                             </div>
 
@@ -174,7 +184,7 @@ const Index = (props) => {
                                     {i18n.deaths}
                                 </BoxPanelHeading>
                                 <div className='cases-numbers'>
-                                    {selectedCountry ? selectedCountry.value.deaths : '-'}
+                                    {selectedCountry ? new Intl.NumberFormat(locale).format(selectedCountry.value.deaths) : '-'}
                                 </div>
                             </div>
 
@@ -183,7 +193,7 @@ const Index = (props) => {
                                     {i18n.recovered}
                                 </BoxPanelHeading>
                                 <div className='cases-numbers'>
-                                    {selectedCountry ? selectedCountry.value.recovered : '-'}
+                                    {selectedCountry ? new Intl.NumberFormat(locale).format(selectedCountry.value.recovered) : '-'}
                                 </div>
                             </div>
 
@@ -192,7 +202,7 @@ const Index = (props) => {
                                     {i18n.active}
                                 </BoxPanelHeading>
                                 <div className='cases-numbers'>
-                                    {selectedCountry ? selectedCountry.value.active : '-'}
+                                    {selectedCountry ? new Intl.NumberFormat(locale).format(selectedCountry.value.active) : '-'}
                                 </div>
                             </div>
                         </BoxesWrapper>
