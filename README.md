@@ -3,7 +3,7 @@
 </h1>
 <br>
 <div align="center">
-<img alt="covid19" src="https://i.imgur.com/Unfqow4.png" width="95%">
+<img alt="covid19" src="https://i.imgur.com/eTDkaMK.png" width="95%">
 </div>
 
 ## Dependencies
