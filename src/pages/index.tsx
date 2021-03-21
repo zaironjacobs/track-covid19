@@ -157,7 +157,7 @@ const Index = (props) => {
 
                         {/* Select country */}
                         <SelectWrapper>
-                            <Select placeholder='Select a Country...'
+                            <Select placeholder={i18n.selectCountry}
                                     className='select-country'
                                     options={countries}
                                     styles={selectCustomStyles}
