@@ -26,6 +26,7 @@ const Layout = ({children}) => {
                     crossOrigin='anonymous'/>
 
                 <meta property='og:image' content=''/>
+                <meta property='og:image:alt' content=''/>
                 <meta property='og:type' content='website'/>
                 <meta property='og:url' content='https://covid19.zaironjacobs.com'/>
                 <meta property='og:title' content='Track COVID19'/>
