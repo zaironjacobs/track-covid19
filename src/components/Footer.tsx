@@ -38,6 +38,10 @@ const Footer = () => {
 
     // Change the language
     const changeLanguage = (value) => {
+        const {locale} = router;
+        if (value == locale) {
+            return;
+        }
         router.push('/', '/', {locale: value});
     }
 
