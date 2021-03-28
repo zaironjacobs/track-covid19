@@ -25,9 +25,12 @@ export default {
         roboto: 'roboto'
     },
 
-    heights: {
-        mobileHeader: '55px',
-        header: '85px',
-        footer: '175px'
+    header: {
+        mobileHeight: '55px',
+        height: '85px'
+    },
+
+    footer: {
+        height: '155px'
     }
 };

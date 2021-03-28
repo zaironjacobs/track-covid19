@@ -48,13 +48,13 @@ export const Main = styled.main`
   flex-direction: column;
   width: 100%;
   padding: 0 8px 50px 8px;
-  min-height: calc(100vh - ${theme.heights.mobileHeader} - ${theme.heights.footer});
+  min-height: calc(100vh - ${theme.header.mobileHeight} - ${theme.footer.height});
 
   ${theme.media._992px} {
     padding-bottom: 50px;
   }
 
   ${theme.media._1200px} {
-    min-height: calc(100vh - ${theme.heights.header} - ${theme.heights.footer});
+    min-height: calc(100vh - ${theme.header.height} - ${theme.footer.height});
   }
 `;

@@ -4,7 +4,7 @@ import theme from 'theme';
 
 export const Content = styled.header`
   z-index: 9999;
-  height: ${theme.heights.mobileHeader};
+  height: ${theme.header.mobileHeight};
   position: sticky;
   top: 0;
   background: ${theme.colors.white};
@@ -16,7 +16,7 @@ export const Content = styled.header`
   box-shadow: 0 5px 15px rgba(0, 115, 235, .05);
 
   ${theme.media._992px} {
-    height: ${theme.heights.header};
+    height: ${theme.header.height};
   }
 
   .logo-wrapper {

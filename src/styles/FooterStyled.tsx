@@ -3,7 +3,7 @@ import theme from 'theme';
 
 
 export const Content = styled.div`
-  height: ${theme.heights.footer};
+  height: ${theme.footer.height};
   background: ${theme.colors.white};
   width: 100%;
   border-top: 1px solid ${theme.colors.lightGrey};
@@ -11,7 +11,7 @@ export const Content = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 25px 25px 25px 25px;
+  padding: 15px 15px 15px 15px;
 
   .built-by {
   }
