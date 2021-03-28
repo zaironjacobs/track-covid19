@@ -6,7 +6,7 @@ import {Main} from '@style/GlobalStyle';
 export const MainContainer = styled(Main)`
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - ${theme.heights.footer});
+  min-height: calc(100vh - ${theme.footer.height});
 `;
 
 
