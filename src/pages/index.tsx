@@ -24,9 +24,12 @@ const Index = (props) => {
     const articlesData: Article[] = props.articlesData;
     const countriesData: Country[] = props.countriesData;
 
-    const worldwideView: number = 0;
-    const countryView: number = 1;
-    const [view, setView] = useState(worldwideView);
+    const VIEWS = {
+        WORLDWIDE_VIEW: 'worldwide_view',
+        COUNTRY_VIEW: 'country_view'
+    }
+
+    const [view, setView] = useState(VIEWS.WORLDWIDE_VIEW);
 
     const [selectedCountry, setSelectedCountry]: [SelectCountry, Dispatch<any>] = useState(null);
 
@@ -69,10 +72,10 @@ const Index = (props) => {
 
     // Toggle the view
     const toggleView: {} = () => {
-        if (view === worldwideView) {
-            setView(countryView);
+        if (view === VIEWS.WORLDWIDE_VIEW) {
+            setView(VIEWS.COUNTRY_VIEW);
         } else {
-            setView(worldwideView);
+            setView(VIEWS.WORLDWIDE_VIEW);
         }
     };
 
@@ -86,12 +89,12 @@ const Index = (props) => {
 
                 {/* Toggle Button */}
                 <ToggleWrapper>
-                    {view === worldwideView &&
+                    {view === VIEWS.WORLDWIDE_VIEW &&
                     <Toggle onClick={toggleView}>{i18n.switchButtonCountry} &nbsp;
                         <i className='fas fa-arrow-circle-right'/>
                     </Toggle>
                     }
-                    {view === countryView &&
+                    {view === VIEWS.COUNTRY_VIEW &&
                     <Toggle onClick={toggleView}>
                         <i className='fas fa-arrow-circle-left'/>&nbsp; {i18n.switchButtonWorldwide}
                     </Toggle>
@@ -99,7 +102,7 @@ const Index = (props) => {
                 </ToggleWrapper>
 
                 {/* Worldwide View */}
-                {view === worldwideView ?
+                {view === VIEWS.WORLDWIDE_VIEW ?
                     <>
                         <WorldIconWrapper>
                             <img src='images/worldwide.svg' alt='world' className='top-icon'/>
@@ -149,7 +152,7 @@ const Index = (props) => {
                     : null}
 
                 {/* Country View */}
-                {view === countryView ?
+                {view === VIEWS.COUNTRY_VIEW ?
                     <>
                         <WorldIconWrapper>
                             <img src='images/country_search.svg' alt='Country Magnify' className='top-icon'/>
