@@ -261,7 +261,7 @@ export const getServerSideProps = async () => {
                 }
                 return countriesData;
             })
-            .catch((error) => {
+            .catch((error: any) => {
                 return [];
             });
     }
@@ -273,7 +273,7 @@ export const getServerSideProps = async () => {
                 worldwideData = res.data;
                 return worldwideData;
             })
-            .catch((error) => {
+            .catch((error: any) => {
                 return null;
             });
     }
@@ -285,7 +285,7 @@ export const getServerSideProps = async () => {
                 articlesData = res.data;
                 return articlesData;
             })
-            .catch((error) => {
+            .catch((error: any) => {
                 return [];
             });
     }

@@ -11,7 +11,6 @@
 - [COVID-19 Data Fetcher](https://github.com/zaironjacobs/covid19-data-fetcher/)
 - [COVID-19 API](https://github.com/zaironjacobs/covid19-api/)
 
-
 ## Download
 ```console
 $ git clone https://github.com/zaironjacobs/track-covid19
