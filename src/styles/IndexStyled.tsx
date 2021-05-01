@@ -168,8 +168,8 @@ export const LatestNews = styled.div`
   max-width: 700px;
   width: 95%;
   border: 1px solid ${theme.colors.lightGrey};
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 5px;
+  overflow: hidden;
   box-shadow: 0 5px 25px rgba(0, 115, 235, .07);
 
   ${theme.media._768px} {
@@ -182,8 +182,8 @@ export const LatestNews = styled.div`
     justify-content: center;
     border-bottom: 1px solid ${theme.colors.lightGrey};
     background-color: ${theme.colors.raisinBlack};
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     color: white;
     margin: 0;
     padding: 10px 0 10px 0;
