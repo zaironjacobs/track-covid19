@@ -13,7 +13,6 @@ const Layout = ({children}) => {
                 <meta name='viewport' content='width=device-width, initial-scale=1'/>
                 <meta name='title' content='Track COVID19'/>
                 <meta name='description' content='Track COVID19'/>
-                <meta name='keywords' content='covid, covid19, virus, corona, coronavirus'/>
                 <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8'/>
 
                 <link
