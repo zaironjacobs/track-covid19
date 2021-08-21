@@ -130,23 +130,23 @@ const Index = (props) => {
                                 </div>
                             </div>
 
-                            <div className='box'>
-                                <BoxPanelHeading color={theme.colors.casesBoxGreen}>
-                                    {i18n.recovered}
-                                </BoxPanelHeading>
-                                <div className='cases-numbers'>
-                                    {worldwideData ? new Intl.NumberFormat(locale).format(worldwideData.recovered) : '-'}
-                                </div>
-                            </div>
+                            {/*<div className='box'>*/}
+                            {/*    <BoxPanelHeading color={theme.colors.casesBoxGreen}>*/}
+                            {/*        {i18n.recovered}*/}
+                            {/*    </BoxPanelHeading>*/}
+                            {/*    <div className='cases-numbers'>*/}
+                            {/*        {worldwideData ? new Intl.NumberFormat(locale).format(worldwideData.recovered) : '-'}*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
 
-                            <div className='box'>
-                                <BoxPanelHeading color={theme.colors.casesBoxBlue}>
-                                    {i18n.active}
-                                </BoxPanelHeading>
-                                <div className='cases-numbers'>
-                                    {worldwideData ? new Intl.NumberFormat(locale).format(worldwideData.active) : '-'}
-                                </div>
-                            </div>
+                            {/*<div className='box'>*/}
+                            {/*    <BoxPanelHeading color={theme.colors.casesBoxBlue}>*/}
+                            {/*        {i18n.active}*/}
+                            {/*    </BoxPanelHeading>*/}
+                            {/*    <div className='cases-numbers'>*/}
+                            {/*        {worldwideData ? new Intl.NumberFormat(locale).format(worldwideData.active) : '-'}*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                         </BoxesWrapper>
                     </>
                     : null}
@@ -191,23 +191,23 @@ const Index = (props) => {
                                 </div>
                             </div>
 
-                            <div className='box'>
-                                <BoxPanelHeading color={theme.colors.casesBoxGreen}>
-                                    {i18n.recovered}
-                                </BoxPanelHeading>
-                                <div className='cases-numbers'>
-                                    {selectedCountry ? new Intl.NumberFormat(locale).format(selectedCountry.value.recovered) : '-'}
-                                </div>
-                            </div>
+                            {/*<div className='box'>*/}
+                            {/*    <BoxPanelHeading color={theme.colors.casesBoxGreen}>*/}
+                            {/*        {i18n.recovered}*/}
+                            {/*    </BoxPanelHeading>*/}
+                            {/*    <div className='cases-numbers'>*/}
+                            {/*        {selectedCountry ? new Intl.NumberFormat(locale).format(selectedCountry.value.recovered) : '-'}*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
 
-                            <div className='box'>
-                                <BoxPanelHeading color={theme.colors.casesBoxBlue}>
-                                    {i18n.active}
-                                </BoxPanelHeading>
-                                <div className='cases-numbers'>
-                                    {selectedCountry ? new Intl.NumberFormat(locale).format(selectedCountry.value.active) : '-'}
-                                </div>
-                            </div>
+                            {/*<div className='box'>*/}
+                            {/*    <BoxPanelHeading color={theme.colors.casesBoxBlue}>*/}
+                            {/*        {i18n.active}*/}
+                            {/*    </BoxPanelHeading>*/}
+                            {/*    <div className='cases-numbers'>*/}
+                            {/*        {selectedCountry ? new Intl.NumberFormat(locale).format(selectedCountry.value.active) : '-'}*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                         </BoxesWrapper>
                     </>
                     : null}

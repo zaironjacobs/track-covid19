@@ -77,7 +77,6 @@ export const WorldIconWrapper = styled.div`
 
 export const BoxesWrapper = styled.div`
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -85,7 +84,7 @@ export const BoxesWrapper = styled.div`
   ${theme.media._1200px} {
     width: 80%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .box {
@@ -94,7 +93,7 @@ export const BoxesWrapper = styled.div`
     width: 100%;
     height: 150px;
     text-align: center;
-    margin: 0 10px 35px 10px;
+    margin: 0 35px 35px 35px;
     box-shadow: 0 5px 25px rgba(0, 115, 235, .07);
     border-radius: 5px;
 
