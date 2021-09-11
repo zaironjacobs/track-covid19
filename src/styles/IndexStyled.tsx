@@ -98,7 +98,7 @@ export const BoxesWrapper = styled.div`
     border-radius: 5px;
 
     ${theme.media._1200px} {
-      width: 275px;
+      max-width: 400px;
       margin-bottom: 0;
     }
   }
