@@ -1,6 +1,6 @@
 interface SelectLanguage {
-    value: string;
-    label: string;
+    value: string
+    label: string
 }
 
-export default SelectLanguage;
+export default SelectLanguage

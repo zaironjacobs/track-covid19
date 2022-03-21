@@ -6,24 +6,27 @@
   "scripts": {
     "dev": "next dev -p 5000",
     "build": "next build",
-    "start": "next start  -p 5000"
+    "start": "next start  -p 5000",
+    "lint": "next lint"
   },
   "author": "Zairon Jacobs <zaironjacobs@gmail.com>",
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^0.26.1",
+    "follow-redirects": ">=1.14.9",
     "moment": "^2.29.1",
-    "mongodb": "^4.3.0",
-    "next": "^12.0.9",
+    "mongodb": "^4.4.1",
+    "next": "^12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-is": "^17.0.2",
     "react-select": "^5.2.2",
-    "styled-components": "^5.3.3",
-    "follow-redirects": ">=1.14.7"
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@types/node": "^17.0.8",
-    "@types/react": "^17.0.38",
-    "typescript": "^4.5.4"
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.41",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
+    "typescript": "4.6.2"
   }
 }

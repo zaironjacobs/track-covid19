@@ -9,5 +9,5 @@ export default {
     worldwide: 'Wereldwijd',
     switchButtonCountry: 'Landen',
     switchButtonWorldwide: 'Wereldwijd',
-    selectCountry: 'Kies een land...'
+    selectCountry: 'Kies een land...',
 }
