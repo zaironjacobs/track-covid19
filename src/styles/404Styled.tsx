@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from 'theme'
-import { Main } from '@styless/GlobalStyle'
+import { Main } from '@styles/GlobalStyle'
 
 export const MainContainer = styled(Main)`
     display: flex;
