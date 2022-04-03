@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from 'theme'
-import { Main } from '@style/GlobalStyle'
+import { Main } from '@styless/GlobalStyle'
 
 export const MainContainer = styled(Main)``
 

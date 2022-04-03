@@ -1,6 +1,6 @@
-import SelectLanguage from '@interface/selectLanguage'
-import en from '@locale/en'
-import nl from '@locale/nl'
+import SelectLanguage from '@interfaces/selectLanguage'
+import en from '@locales/en'
+import nl from '@locales/nl'
 
 export default {
     en: en,

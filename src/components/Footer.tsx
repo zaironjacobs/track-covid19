@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { Content } from '@style/FooterStyled'
-import SelectLanguage from '@interface/selectLanguage'
+import { Content } from '@styles/FooterStyled'
+import SelectLanguage from '@interfaces/selectLanguage'
 import { Dispatch, useEffect, useState } from 'react'
 import { NextRouter, useRouter } from 'next/router'
 import Select from 'react-select'
-import { languages } from '@locale/index'
+import { languages } from '@locales/index'
 
 const Footer = () => {
     const [selectedLanguageLabel, setSelectedLanguageLabel]: [string, Dispatch<any>] = useState('')

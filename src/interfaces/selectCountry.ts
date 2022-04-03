@@ -1,4 +1,4 @@
-import Country from '@interface/country'
+import Country from '@interfaces/country'
 
 interface SelectCountry {
     value: Country

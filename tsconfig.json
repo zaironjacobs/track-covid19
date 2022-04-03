@@ -3,16 +3,16 @@
     "target": "es6",
     "baseUrl": "src",
     "paths": {
-      "@style/*": [
+      "@styles/*": [
         "styles/*"
       ],
-      "@component/*": [
+      "@components/*": [
         "components/*"
       ],
-      "@interface/*": [
+      "@interfaces/*": [
         "interfaces/*"
       ],
-      "@locale/*": [
+      "@locales/*": [
         "locales/*"
       ]
     },

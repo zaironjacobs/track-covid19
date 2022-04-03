@@ -12,15 +12,15 @@ import {
     Toggle,
     ToggleWrapper,
     WorldIconWrapper,
-} from '@style/IndexStyled'
-import Header from '@component/Header'
+} from '@styles/IndexStyled'
+import Header from '@components/Header'
 import Link from 'next/link'
 import Select from 'react-select'
 import moment from 'moment'
 import theme from 'theme'
-import Article from '@interface/article'
-import Country from '@interface/country'
-import SelectCountry from '@interface/selectCountry'
+import Article from '@interfaces/article'
+import Country from '@interfaces/country'
+import SelectCountry from '@interfaces/selectCountry'
 import { NextRouter, useRouter } from 'next/router'
 
 const Index = (props) => {

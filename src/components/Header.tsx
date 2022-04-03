@@ -1,4 +1,4 @@
-import { Content } from '@style/HeaderStyled'
+import { Content } from '@styles/HeaderStyled'
 import Link from 'next/link'
 import Image from 'next/image'
 

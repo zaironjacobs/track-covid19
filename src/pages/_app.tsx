@@ -1,9 +1,9 @@
 import { ThemeProvider } from 'styled-components'
 import theme from 'theme'
-import { GlobalStyle } from '@style/GlobalStyle'
-import Layout from '@component/Layout'
+import { GlobalStyle } from '@styles/GlobalStyle'
+import Layout from '@components/Layout'
 import { NextRouter, useRouter } from 'next/router'
-import locales from '@locale/index'
+import locales from '@locales/index'
 
 const App = ({ Component, pageProps }) => {
     const router: NextRouter = useRouter()

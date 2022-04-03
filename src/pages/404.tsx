@@ -1,4 +1,4 @@
-import { MainContainer, NotFoundWrapper } from '@style/404Styled'
+import { MainContainer, NotFoundWrapper } from '@styles/404Styled'
 import Head from 'next/head'
 import global from 'global'
 
