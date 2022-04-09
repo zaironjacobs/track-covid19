@@ -13,7 +13,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "follow-redirects": ">=1.14.9",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "mongodb": "^4.4.1",
     "next": "^12.1.4",
     "react": "18.0.0",
