@@ -30,11 +30,11 @@ COVID19_API_URL=http://127.0.0.1:8050
 
 ```bash
 npm install
+npm run build
 ```
 
 ## Run
 
 ```console
-npm run build
 npm run start -- -p [PORT_NUMBER]
 ```
