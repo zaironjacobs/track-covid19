@@ -15,7 +15,7 @@
 ## Download
 
 ```console
-$ git clone https://github.com/zaironjacobs/track-covid19
+git clone https://github.com/zaironjacobs/track-covid19
 ```
 
 ## Usage
@@ -26,10 +26,15 @@ Copy the file .env.local.example to .env.local and fill in the environment varia
 COVID19_API_URL=http://127.0.0.1:8050
 ```
 
-To use:
+## Install
+
+```bash
+npm install
+```
+
+## Run
 
 ```console
-$ cd track-covid19
-$ npm install
-$ npm run build && npm run start
+npm run build
+npm run start -- -p {PORT_NUMBER}
 ```
