@@ -36,5 +36,5 @@ npm install
 
 ```console
 npm run build
-npm run start -- -p {PORT_NUMBER}
+npm run start -- -p [PORT_NUMBER]
 ```
