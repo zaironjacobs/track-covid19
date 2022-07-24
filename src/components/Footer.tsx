@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Content } from '@styles/FooterStyled'
-import SelectLanguage from '@interfaces/selectLanguage'
+import { SelectLanguage} from '@interfaces'
 import { Dispatch, useEffect, useState } from 'react'
 import { NextRouter, useRouter } from 'next/router'
 import Select from 'react-select'

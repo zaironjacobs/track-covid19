@@ -1,4 +1,4 @@
-interface Country {
+export interface Country {
     name: string
     active: number
     deaths: number
@@ -6,5 +6,3 @@ interface Country {
     confirmed: number
     last_updated_by_source_at: Date
 }
-
-export default Country

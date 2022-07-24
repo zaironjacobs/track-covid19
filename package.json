@@ -1,7 +1,7 @@
 {
   "name": "track-covid19",
   "version": "0.1.0",
-  "description": "Track COVID-19 Website",
+  "description": "Track COVID-19",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,21 +12,21 @@
   "author": "Zairon Jacobs <zaironjacobs@gmail.com>",
   "dependencies": {
     "axios": "^0.26.1",
-    "follow-redirects": ">=1.14.9",
     "moment": "^2.29.2",
     "mongodb": "^4.4.1",
     "next": "^12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-is": "^18.0.0",
     "react-select": "^5.2.2",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/node": "17.0.23",
     "@types/react": "17.0.43",
+    "@types/react-dom": "18.0.3",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",
-    "typescript": "4.6.3"
+    "typescript": "4.6.3",
+    "prettier": "2.6.2"
   }
 }

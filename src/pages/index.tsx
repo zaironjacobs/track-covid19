@@ -18,9 +18,7 @@ import Link from 'next/link'
 import Select from 'react-select'
 import moment from 'moment'
 import theme from 'theme'
-import Article from '@interfaces/article'
-import Country from '@interfaces/country'
-import SelectCountry from '@interfaces/selectCountry'
+import { Article, Country, SelectCountry } from '@interfaces'
 import { NextRouter, useRouter } from 'next/router'
 
 const Index = (props) => {
@@ -113,12 +111,7 @@ const Index = (props) => {
                 {view === VIEWS.WORLDWIDE_VIEW ? (
                     <>
                         <WorldIconWrapper>
-                            <Image
-                                src="/images/worldwide.svg"
-                                alt="world"
-                                width={75}
-                                height={75}
-                            />
+                            <Image src="/images/worldwide.svg" alt="world" width={75} height={75} />
                         </WorldIconWrapper>
 
                         <Title>{i18n.worldwide}</Title>
@@ -166,12 +159,7 @@ const Index = (props) => {
                 {view === VIEWS.COUNTRY_VIEW ? (
                     <>
                         <WorldIconWrapper>
-                            <Image
-                                src="/images/country_search.svg"
-                                alt="Country Magnify"
-                                width={75}
-                                height={75}
-                            />
+                            <Image src="/images/country_search.svg" alt="Country Magnify" width={75} height={75} />
                         </WorldIconWrapper>
 
                         {/* Select country */}

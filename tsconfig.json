@@ -9,8 +9,8 @@
       "@components/*": [
         "components/*"
       ],
-      "@interfaces/*": [
-        "interfaces/*"
+      "@interfaces": [
+        "interfaces"
       ],
       "@locales/*": [
         "locales/*"
