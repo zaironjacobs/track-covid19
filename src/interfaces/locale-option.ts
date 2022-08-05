@@ -1,4 +1,4 @@
-export interface SelectLanguage {
+export interface ILocaleOption {
     value: string
     label: string
 }

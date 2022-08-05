@@ -1,21 +1,21 @@
 import styled from 'styled-components'
-import theme from 'theme'
+import { Theme } from '@theme'
 
 export const Content = styled.header`
     z-index: 9999;
-    height: ${theme.header.mobileHeight};
+    height: ${Theme.header.mobileHeight};
     position: sticky;
     top: 0;
-    background: ${theme.colors.white};
+    background: ${Theme.colors.white};
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid ${theme.colors.lightGrey};
+    border-bottom: 1px solid ${Theme.colors.lightGrey};
     box-shadow: 0 5px 15px rgba(0, 115, 235, 0.05);
 
-    ${theme.media._992px} {
-        height: ${theme.header.height};
+    ${Theme.media._992px} {
+        height: ${Theme.header.height};
     }
 
     .logo-wrapper {
@@ -31,17 +31,17 @@ export const Content = styled.header`
         text-align: center;
         font-size: 22px;
 
-        ${theme.media._768px} {
+        ${Theme.media._768px} {
             font-size: 32px;
         }
 
         a {
             text-decoration: none;
             font-weight: 400;
-            color: ${theme.colors.black};
+            color: ${Theme.colors.black};
         }
 
-        ${theme.media._992px} {
+        ${Theme.media._992px} {
             padding-left: 0;
         }
     }

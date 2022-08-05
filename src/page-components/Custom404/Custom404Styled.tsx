@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import theme from 'theme'
-import { Main } from '@styles/GlobalStyle'
+import { Theme } from '@theme'
+import { Main } from '@components/MyApp/MyAppStyled'
 
 export const MainContainer = styled(Main)`
     display: flex;
     justify-content: center;
-    min-height: calc(100vh - ${theme.footer.height});
+    min-height: calc(100vh - ${Theme.footer.height});
 `
 
 export const NotFoundWrapper = styled.div`
@@ -19,11 +19,11 @@ export const NotFoundWrapper = styled.div`
         line-height: 1;
         text-transform: uppercase;
 
-        ${theme.media._768px} {
+        ${Theme.media._768px} {
             font-size: 140px;
         }
 
-        ${theme.media._1200px} {
+        ${Theme.media._1200px} {
             font-size: 160px;
         }
     }
@@ -32,11 +32,11 @@ export const NotFoundWrapper = styled.div`
         font-size: 20px;
         text-transform: uppercase;
 
-        ${theme.media._768px} {
+        ${Theme.media._768px} {
             font-size: 24px;
         }
 
-        ${theme.media._1200px} {
+        ${Theme.media._1200px} {
             font-size: 26px;
         }
     }

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2021",
     "baseUrl": "src",
     "paths": {
       "@styles/*": [
@@ -9,11 +9,23 @@
       "@components/*": [
         "components/*"
       ],
+      "@page-components/*": [
+        "page-components/*"
+      ],
       "@interfaces": [
         "interfaces"
       ],
+      "@enums/*": [
+        "enums/*"
+      ],
       "@locales/*": [
         "locales/*"
+      ],
+      "@global": [
+        "global.ts"
+      ],
+      "@theme": [
+        "theme.ts"
       ]
     },
     "lib": [
@@ -23,7 +35,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,

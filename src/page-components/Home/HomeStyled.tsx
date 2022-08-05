@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import theme from 'theme'
-import { Main } from '@styles/GlobalStyle'
+import { Theme } from '@theme'
+import { Main } from '@components/MyApp/MyAppStyled'
 
 export const MainContainer = styled(Main)``
 
@@ -11,7 +11,7 @@ export const ToggleWrapper = styled.div`
     margin-top: 35px;
     margin-bottom: 15px;
 
-    ${theme.media._992px} {
+    ${Theme.media._992px} {
         margin-bottom: 35px;
     }
 `
@@ -19,7 +19,7 @@ export const ToggleWrapper = styled.div`
 export const Toggle = styled.button`
     cursor: pointer;
     color: white;
-    background: ${theme.colors.denimBlue};
+    background: ${Theme.colors.denimBlue};
     border: none;
     height: 40px;
     max-width: 300px;
@@ -30,13 +30,13 @@ export const Toggle = styled.button`
     font-size: 18px;
 
     :hover {
-        background: ${theme.colors.royalBlueLight};
+        background: ${Theme.colors.royalBlueLight};
         -webkit-box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
         -moz-box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
         box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
     }
 
-    ${theme.media._768px} {
+    ${Theme.media._768px} {
         height: 45px;
         width: 350px;
     }
@@ -60,7 +60,7 @@ export const WorldIconWrapper = styled.div`
         height: 75px;
     }
 
-    ${theme.media._1200px} {
+    ${Theme.media._1200px} {
         img {
             width: 140px;
             height: 140px;
@@ -74,7 +74,7 @@ export const BoxesWrapper = styled.div`
     align-items: center;
     width: 100%;
 
-    ${theme.media._1200px} {
+    ${Theme.media._1200px} {
         width: 80%;
         flex-direction: row;
         justify-content: center;
@@ -90,7 +90,7 @@ export const BoxesWrapper = styled.div`
         box-shadow: 0 5px 25px rgba(0, 115, 235, 0.07);
         border-radius: 5px;
 
-        ${theme.media._1200px} {
+        ${Theme.media._1200px} {
             max-width: 400px;
             margin-bottom: 0;
         }
@@ -111,7 +111,7 @@ export const BoxPanelHeading = styled.div`
     align-items: center;
     justify-content: center;
     height: 35px;
-    color: ${theme.colors.white};
+    color: ${Theme.colors.white};
     background-color: ${(props) => props.color};
     font-weight: 400;
     border-top-left-radius: 5px;
@@ -128,7 +128,7 @@ export const SelectWrapper = styled.div`
     width: 350px;
     margin: 0 auto;
 
-    ${theme.media._992px} {
+    ${Theme.media._992px} {
       width: 50%
     }
 `
@@ -137,7 +137,7 @@ export const Info = styled.div`
     margin-top: 15px;
     padding: 0 10px 0 10px;
 
-    ${theme.media._1200px} {
+    ${Theme.media._1200px} {
         margin-top: 50px;
     }
 
@@ -155,12 +155,12 @@ export const LatestNews = styled.div`
     margin: 50px 0 0 0;
     max-width: 700px;
     width: 95%;
-    border: 1px solid ${theme.colors.lightGrey};
+    border: 1px solid ${Theme.colors.lightGrey};
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 5px 25px rgba(0, 115, 235, 0.07);
 
-    ${theme.media._768px} {
+    ${Theme.media._768px} {
         max-width: 750px;
         width: 100%;
     }
@@ -168,8 +168,8 @@ export const LatestNews = styled.div`
     .heading {
         display: flex;
         justify-content: center;
-        border-bottom: 1px solid ${theme.colors.lightGrey};
-        background-color: ${theme.colors.raisinBlack};
+        border-bottom: 1px solid ${Theme.colors.lightGrey};
+        background-color: ${Theme.colors.raisinBlack};
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         color: white;
@@ -189,7 +189,7 @@ export const LatestNews = styled.div`
         flex-direction: column;
         margin-bottom: 15px;
         padding: 0 20px 15px 20px;
-        border-bottom: 1px solid ${theme.colors.lightGrey};
+        border-bottom: 1px solid ${Theme.colors.lightGrey};
 
         :first-child {
             margin-top: 15px;

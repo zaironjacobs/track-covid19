@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import theme from 'theme'
+import { Theme } from '@theme'
 
 export const Content = styled.div`
-    height: ${theme.footer.height};
-    background: ${theme.colors.white};
+    height: ${Theme.footer.height};
+    background: ${Theme.colors.white};
     width: 100%;
-    border-top: 1px solid ${theme.colors.lightGrey};
+    border-top: 1px solid ${Theme.colors.lightGrey};
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -24,7 +24,7 @@ export const Content = styled.div`
             transition: 0.3s;
 
             :hover {
-                color: ${theme.colors.royalBlueLight};
+                color: ${Theme.colors.royalBlueLight};
             }
         }
     }
@@ -35,7 +35,7 @@ export const Content = styled.div`
         justify-content: center;
         align-items: center;
 
-        ${theme.media._1200px} {
+        ${Theme.media._1200px} {
             justify-content: flex-end;
         }
 

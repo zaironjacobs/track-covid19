@@ -1,4 +1,4 @@
-export default {
+export const Theme = {
     media: {
         _480px: '@media (min-width: 480px)',
         _768px: '@media (min-width: 768px)',

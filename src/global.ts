@@ -1,7 +1,3 @@
-export default {
+export const Global = {
     siteName: 'Track COVID-19',
-
-    paths: {
-        index: '/',
-    },
 }

@@ -1,0 +1,12 @@
+{
+  "locales": [
+    "nl",
+    "en"
+  ],
+  "defaultLocale": "en",
+  "pages": {
+    "*": [
+      "common"
+    ]
+  }
+}
