@@ -7,13 +7,15 @@ export const Header = () => {
         <Content>
             {/* Logo */}
             <div className="logo-wrapper">
-                <Link href="/src/pages" passHref>
-                    <div className="virus-icon-wrapper">
-                        <Image src="/images/coronavirus.svg" alt="coronavirus" width={45} height={40} />
-                    </div>
+                <Link href="/">
+                    <a>
+                        <div className="virus-icon-wrapper">
+                            <Image src="/images/coronavirus.svg" alt="coronavirus" width={45} height={40} />
+                        </div>
+                    </a>
                 </Link>
                 <div className="name">
-                    <Link href="/src/pages">Track COVID-19</Link>
+                    <Link href="/">Track COVID-19</Link>
                 </div>
             </div>
         </Content>
