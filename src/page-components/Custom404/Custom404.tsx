@@ -6,7 +6,7 @@ export const Custom404 = () => {
     return (
         <>
             <Head>
-                <title>Page not found – {global.siteName}</title>
+                <title>{`Page not found – ${global.siteName}`}</title>
                 <meta name="description" content="page not found" />
             </Head>
             <NotFoundWrapper>
