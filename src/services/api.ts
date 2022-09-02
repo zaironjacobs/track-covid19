@@ -25,7 +25,7 @@ export async function getCountries() {
  */
 export async function getCountry(name: string) {
     const { data }: AxiosResponse<ICountry[]> = await axios({
-        url: `${apiUrl}/countries?name=${name}`,
+        url: `${apiUrl}/countries/${name}`,
         method: 'get',
     })
 
