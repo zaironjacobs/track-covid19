@@ -35,6 +35,13 @@ class MyDocument extends Document {
                     <meta name="description" content="Track COVID19" />
                     <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
 
+                    <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+                    {/*<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />*/}
+                    {/*<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />*/}
+                    {/*<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />*/}
+                    {/*<link rel="manifest" href="/site.webmanifest" />*/}
+                    <meta name="description" content="Notes" />
+
                     <meta property="og:image" content="" />
                     <meta property="og:image:alt" content="" />
                     <meta property="og:type" content="website" />

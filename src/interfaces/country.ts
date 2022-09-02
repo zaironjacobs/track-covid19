@@ -1,4 +1,4 @@
-export interface Country {
+export interface ICountry {
     name: string
     active: number
     deaths: number

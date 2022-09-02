@@ -1,3 +1,3 @@
-export const Global = {
+export const global = {
     siteName: 'Track COVID-19',
 }

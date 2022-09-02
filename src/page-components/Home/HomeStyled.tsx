@@ -1,8 +1,6 @@
 import styled from 'styled-components'
-import { Theme } from '@theme'
-import { Main } from '@components/MyApp/MyAppStyled'
-
-export const MainContainer = styled(Main)``
+import { theme } from '@theme'
+import Select from 'react-select'
 
 export const ToggleWrapper = styled.div`
     width: 100%;
@@ -11,7 +9,7 @@ export const ToggleWrapper = styled.div`
     margin-top: 35px;
     margin-bottom: 15px;
 
-    ${Theme.media._992px} {
+    ${theme.media._992px} {
         margin-bottom: 35px;
     }
 `
@@ -19,7 +17,7 @@ export const ToggleWrapper = styled.div`
 export const Toggle = styled.button`
     cursor: pointer;
     color: white;
-    background: ${Theme.colors.denimBlue};
+    background: ${theme.colors.denimBlue};
     border: none;
     height: 40px;
     max-width: 300px;
@@ -30,13 +28,13 @@ export const Toggle = styled.button`
     font-size: 18px;
 
     :hover {
-        background: ${Theme.colors.royalBlueLight};
+        background: ${theme.colors.royalBlueLight};
         -webkit-box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
         -moz-box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
         box-shadow: 0 0 41px -17px rgba(0, 0, 0, 0.6);
     }
 
-    ${Theme.media._768px} {
+    ${theme.media._768px} {
         height: 45px;
         width: 350px;
     }
@@ -60,7 +58,7 @@ export const WorldIconWrapper = styled.div`
         height: 75px;
     }
 
-    ${Theme.media._1200px} {
+    ${theme.media._1200px} {
         img {
             width: 140px;
             height: 140px;
@@ -68,42 +66,41 @@ export const WorldIconWrapper = styled.div`
     }
 `
 
+export const Box = styled.div`
+    border: 1px solid #f1f1f1;
+    max-width: 350px;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    margin: 0 35px 35px 35px;
+    box-shadow: 0 5px 25px rgba(0, 115, 235, 0.07);
+    border-radius: 5px;
+
+    ${theme.media._1200px} {
+        max-width: 400px;
+        margin-bottom: 0;
+    }
+`
 export const BoxesWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 
-    ${Theme.media._1200px} {
+    ${theme.media._1200px} {
         width: 80%;
         flex-direction: row;
         justify-content: center;
     }
+`
 
-    .box {
-        border: 1px solid #f1f1f1;
-        max-width: 350px;
-        width: 100%;
-        height: 150px;
-        text-align: center;
-        margin: 0 35px 35px 35px;
-        box-shadow: 0 5px 25px rgba(0, 115, 235, 0.07);
-        border-radius: 5px;
-
-        ${Theme.media._1200px} {
-            max-width: 400px;
-            margin-bottom: 0;
-        }
-    }
-
-    .cases-numbers {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 115px;
-        font-weight: 400;
-        font-size: 28px;
-    }
+export const CasesNumbers = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 115px;
+    font-weight: 400;
+    font-size: 28px;
 `
 
 export const BoxPanelHeading = styled.div`
@@ -111,7 +108,7 @@ export const BoxPanelHeading = styled.div`
     align-items: center;
     justify-content: center;
     height: 35px;
-    color: ${Theme.colors.white};
+    color: ${theme.colors.white};
     background-color: ${(props) => props.color};
     font-weight: 400;
     border-top-left-radius: 5px;
@@ -120,106 +117,116 @@ export const BoxPanelHeading = styled.div`
 `
 
 export const SelectWrapper = styled.div`
-  margin-top: 15px;
-  width: 100%;
-  text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+`
 
-  .select-country {
-    width: 350px;
-    margin: 0 auto;
+export const SelectCountry = styled(Select)`
+  width: 350px;
+  margin: 0 auto;
 
-    ${Theme.media._992px} {
-      width: 50%
-    }
+  ${theme.media._992px} {
+    width: 50%
 `
 
 export const Info = styled.div`
     margin-top: 15px;
     padding: 0 10px 0 10px;
 
-    ${Theme.media._1200px} {
+    ${theme.media._1200px} {
         margin-top: 50px;
     }
+`
 
-    .last-updated {
-        text-align: center;
-    }
+export const LastUpdated = styled.p`
+    text-align: center;
+`
 
-    .data-source {
-        text-align: center;
-        margin-top: 10px;
-    }
+export const DataSource = styled.p`
+    text-align: center;
+    margin-top: 10px;
 `
 
 export const LatestNews = styled.div`
     margin: 50px 0 0 0;
     max-width: 700px;
     width: 95%;
-    border: 1px solid ${Theme.colors.lightGrey};
+    border: 1px solid ${theme.colors.lightGrey};
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 5px 25px rgba(0, 115, 235, 0.07);
 
-    ${Theme.media._768px} {
+    ${theme.media._768px} {
         max-width: 750px;
         width: 100%;
     }
+`
 
-    .heading {
-        display: flex;
-        justify-content: center;
-        border-bottom: 1px solid ${Theme.colors.lightGrey};
-        background-color: ${Theme.colors.raisinBlack};
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        color: white;
-        margin: 0;
-        padding: 10px 0 10px 0;
-        font-weight: 400;
-        font-size: 20px;
+export const NewsHeading = styled.div`
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid ${theme.colors.lightGrey};
+    background-color: ${theme.colors.raisinBlack};
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    font-weight: 400;
+    font-size: 20px;
+`
+
+export const News = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 0 20px 15px 20px;
+    border-bottom: 1px solid ${theme.colors.lightGrey};
+
+    :first-child {
+        margin-top: 15px;
     }
 
-    .news-box {
-        height: 400px;
-        overflow: scroll;
+    :last-child {
+        border-bottom: none;
+        margin-bottom: 0;
     }
+`
 
-    .news {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 15px;
-        padding: 0 20px 15px 20px;
-        border-bottom: 1px solid ${Theme.colors.lightGrey};
+export const NewsTitle = styled.div`
+    font-weight: 400;
+    margin-bottom: 3px;
+    font-size: 20px;
 
-        :first-child {
-            margin-top: 15px;
+    a {
+        color: ${theme.colors.black};
+        text-decoration: none;
+        transition: 0.3s;
+
+        :hover {
+            color: ${theme.colors.royalBlueLight};
         }
-
-        :last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
     }
+`
 
-    .title {
-        font-weight: 400;
-        margin-bottom: 3px;
-        font-size: 20px;
-    }
+export const NewsPublishedDate = styled.p`
+    font-size: 0.8rem;
+    margin: 3px 0 3px 0;
+    font-weight: 300;
+`
 
-    .description {
-        margin: 3px 0 15px 0;
-        font-weight: 300;
-    }
+export const NewsDescription = styled.p`
+    margin: 3px 0 15px 0;
+    font-weight: 300;
+`
 
-    .source-name {
-        margin: 3px 0 3px 0;
-        font-weight: 400;
-    }
+export const NewsBox = styled.div`
+    height: 400px;
+    overflow: scroll;
+`
 
-    .published-date {
-        font-size: 0.8rem;
-        margin: 3px 0 3px 0;
-        font-weight: 300;
-    }
+export const NewsSourceName = styled.p`
+    margin: 3px 0 3px 0;
+    font-weight: 400;
 `

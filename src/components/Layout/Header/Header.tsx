@@ -1,23 +1,24 @@
-import { Content } from '@components/Layout/Header/HeaderStyled'
+import { LogoWrapper, Name, VirusIconWrapper, Wrapper } from '@components/Layout/Header/HeaderStyled'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export const Header = () => {
     return (
-        <Content>
-            {/* Logo */}
-            <div className="logo-wrapper">
+        <Wrapper>
+            <LogoWrapper>
                 <Link href="/">
                     <a>
-                        <div className="virus-icon-wrapper">
+                        <VirusIconWrapper>
                             <Image src="/images/coronavirus.svg" alt="coronavirus" width={45} height={40} />
-                        </div>
+                        </VirusIconWrapper>
                     </a>
                 </Link>
-                <div className="name">
-                    <Link href="/">Track COVID-19</Link>
-                </div>
-            </div>
-        </Content>
+                <Name>
+                    <Link href="/">
+                        <a>Track COVID-19</a>
+                    </Link>
+                </Name>
+            </LogoWrapper>
+        </Wrapper>
     )
 }

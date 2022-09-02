@@ -1,4 +1,4 @@
-export interface Article {
+export interface IArticle {
     title: string
     source_name: string
     author: string

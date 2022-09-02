@@ -1,4 +1,4 @@
-export interface SelectLanguage {
+export interface ISelectLanguage {
     value: string
     label: string
 }

@@ -2,8 +2,9 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import Head from 'next/head'
 import { Footer } from '@components/Layout/Footer'
 import { ReactNode } from 'react'
-import { Global } from '@global'
+import { global } from '@global'
 import { Header } from '@components/Layout/Header'
+import { Wrapper } from './LayoutStyled'
 
 interface ILayoutProps {
     children: ReactNode
@@ -14,14 +15,14 @@ export const Layout = ({ children }: ILayoutProps) => {
         <>
             {/* Title */}
             <Head>
-                <title>{Global.siteName}</title>
+                <title>{global.siteName}</title>
             </Head>
 
             {/* Header */}
             <Header />
 
             {/* Page content */}
-            {children}
+            <Wrapper>{children}</Wrapper>
 
             {/* Footer */}
             <Footer />

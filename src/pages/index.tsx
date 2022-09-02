@@ -1,40 +1,17 @@
-import axios from 'axios'
-import { Country } from '@interfaces'
+import { ICountry } from '@interfaces'
 import { Home } from '@page-components/Home'
+import { getArticles, getCountries, getCountry } from '../services/api'
 
 export default Home
 
 export const getServerSideProps = async () => {
-    const apiUrl: string = process.env.COVID19_API_URL as string
-
-    const fetchCountries = () => {
-        return axios
-            .get(apiUrl + '/countries')
-            .then((res) => {
-                return res.data.filter((country: Country) => country.name !== 'Worldwide')
-            })
-            .catch(() => null)
-    }
-
-    const fetchWorldwide = () => {
-        return axios
-            .get(apiUrl + '/country?name=Worldwide')
-            .then((res) => res.data)
-            .catch(() => null)
-    }
-
-    const fetchArticles = () => {
-        return axios
-            .get(apiUrl + '/articles')
-            .then((res) => res.data)
-            .catch(() => null)
-    }
-
-    const [countriesData, worldwideData, articlesData] = await Promise.all([
-        fetchCountries(),
-        fetchWorldwide(),
-        fetchArticles(),
+    let [countriesData, worldwideData, articlesData] = await Promise.all([
+        getCountries(),
+        getCountry('Worldwide'),
+        getArticles(),
     ])
+
+    countriesData = countriesData.filter((country: ICountry) => country.name !== 'Worldwide')
 
     return {
         props: { worldwideData, countriesData, articlesData },

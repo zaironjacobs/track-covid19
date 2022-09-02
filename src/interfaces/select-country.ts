@@ -1,6 +1,6 @@
-import { Country } from './country'
+import { ICountry } from './country'
 
-export interface SelectCountry {
-    value: Country
+export interface ISelectCountry {
+    value: ICountry
     label: string
 }

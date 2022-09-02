@@ -1,55 +1,65 @@
 import styled from 'styled-components'
-import { Theme } from '@theme'
+import { theme } from '@theme'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Select from 'react-select'
 
-export const Content = styled.div`
-    height: ${Theme.footer.height};
-    background: ${Theme.colors.white};
+export const Wrapper = styled.div`
+    height: ${theme.footer.height};
+    background: ${theme.colors.white};
     width: 100%;
-    border-top: 1px solid ${Theme.colors.lightGrey};
+    border-top: 1px solid ${theme.colors.lightGrey};
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 15px 15px 15px 15px;
+`
 
-    .built-by {
+export const SelectLanguageWrapper = styled.div`
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+
+    ${theme.media._1200px} {
+        justify-content: flex-end;
     }
+`
 
-    .github-icon-wrapper {
-        margin: 25px 0 10px 0;
+export const WorldIconWrapper = styled.div`
+    margin-right: 10px;
 
-        .github-icon {
-            color: black;
-            font-size: 25px;
-            transition: 0.3s;
-
-            :hover {
-                color: ${Theme.colors.royalBlueLight};
-            }
-        }
+    i {
+        font-size: 20px;
     }
+`
 
-    .select-language-wrapper {
-        display: flex;
-        width: 80%;
-        justify-content: center;
-        align-items: center;
+export const SelectLanguage = styled(Select)`
+    max-width: 225px;
+    width: 100%;
+`
 
-        ${Theme.media._1200px} {
-            justify-content: flex-end;
-        }
+export const GitHubIconWrapper = styled.div`
+    margin: 25px 0 10px 0;
+`
 
-        .world-icon-wrapper {
-            margin-right: 10px;
+export const GitHubIcon = styled(FontAwesomeIcon)`
+    color: black;
+    font-size: 25px;
+    transition: 0.3s;
 
-            i {
-                font-size: 20px;
-            }
-        }
+    :hover {
+        color: ${theme.colors.royalBlueLight};
+    }
+`
+export const BuiltBy = styled.div`
+    a {
+        color: ${theme.colors.black};
+        text-decoration: none;
+        transition: 0.3s;
 
-        .select-language {
-            max-width: 225px;
-            width: 100%;
+        :hover {
+            color: ${theme.colors.royalBlueLight};
         }
     }
 `
