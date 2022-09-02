@@ -33,7 +33,7 @@ export async function getCountry(name: string) {
 }
 
 /**
- * Get user
+ * Get articles
  *
  * @return {Promise<IArticle}
  */
