@@ -38,6 +38,9 @@
       "@locales/*": [
         "locales/*"
       ],
+      "@services/*": [
+        "services/*"
+      ],
       "@global": [
         "global.ts"
       ],

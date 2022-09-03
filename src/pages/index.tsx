@@ -1,6 +1,6 @@
 import { ICountry } from '@interfaces'
 import { Home } from '@page-components/Home'
-import { getArticles, getCountries, getCountry } from '../services/api'
+import { getArticles, getCountries, getCountry } from '@services/api'
 
 export default Home
 
