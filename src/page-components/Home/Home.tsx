@@ -29,7 +29,7 @@ import Image from 'next/image'
 import { theme } from '@theme'
 import Link from 'next/link'
 import { NextPage } from 'next'
-import { EView } from '@enums/view'
+import { View } from '@types'
 import useTranslation from 'next-translate/useTranslation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleLeft, faCircleRight } from '@fortawesome/free-solid-svg-icons'
@@ -47,7 +47,7 @@ export const Home: NextPage<IHomeProps> = ({ worldwideData, articlesData, countr
     const router: NextRouter = useRouter()
     const { locale } = router
     const [selectedCountry, setSelectedCountry] = useState<ISelectCountry>(undefined as any)
-    const [view, setView] = useState(EView.WORLD)
+    const [view, setView] = useState<View>('WORLDWIDE')
     const selectCountries: ISelectCountry[] = []
     let fetchDateString = ''
 
@@ -87,8 +87,8 @@ export const Home: NextPage<IHomeProps> = ({ worldwideData, articlesData, countr
 
     // Toggle the view
     function toggleView() {
-        if (view === EView.WORLD) setView(EView.COUNTRY)
-        else setView(EView.WORLD)
+        if (view === 'WORLDWIDE') setView('COUNTRY')
+        else setView('WORLDWIDE')
     }
 
     function onCountryChange(county: ISelectCountry) {
@@ -103,13 +103,13 @@ export const Home: NextPage<IHomeProps> = ({ worldwideData, articlesData, countr
 
             {/* Toggle Button */}
             <ToggleWrapper>
-                {view === EView.WORLD && (
+                {view === 'WORLDWIDE' && (
                     <Toggle onClick={toggleView}>
                         {t('common:switchButtonCountry')} &nbsp;
                         <FontAwesomeIcon icon={faCircleRight} />
                     </Toggle>
                 )}
-                {view === EView.COUNTRY && (
+                {view === 'COUNTRY' && (
                     <Toggle onClick={toggleView}>
                         <FontAwesomeIcon icon={faCircleLeft} />
                         &nbsp; {t('common:switchButtonWorldwide')}
@@ -118,7 +118,7 @@ export const Home: NextPage<IHomeProps> = ({ worldwideData, articlesData, countr
             </ToggleWrapper>
 
             {/* Worldwide View */}
-            {view === EView.WORLD && (
+            {view === 'WORLDWIDE' && (
                 <>
                     <WorldIconWrapper>
                         <Image src="/images/worldwide.svg" alt="world" width={75} height={75} />
@@ -148,7 +148,7 @@ export const Home: NextPage<IHomeProps> = ({ worldwideData, articlesData, countr
             )}
 
             {/* Country View */}
-            {view === EView.COUNTRY && (
+            {view === 'COUNTRY' && (
                 <>
                     <WorldIconWrapper>
                         <Image src="/images/country_search.svg" alt="Country Magnify" width={75} height={75} />

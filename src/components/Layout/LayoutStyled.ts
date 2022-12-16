@@ -17,4 +17,3 @@ export const Wrapper = styled.main`
         min-height: calc(100vh - ${theme.header.height} - ${theme.footer.height});
     }
 `
-

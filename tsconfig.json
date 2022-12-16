@@ -32,8 +32,8 @@
       "@interfaces": [
         "interfaces"
       ],
-      "@enums/*": [
-        "enums/*"
+      "@types": [
+        "types"
       ],
       "@locales/*": [
         "locales/*"
