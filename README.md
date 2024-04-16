@@ -1,9 +1,7 @@
-<h1 align="center">
-<a href="https://covid19.zaironjacobs.com/" target="_blank">TRACK COVID-19</a>
-</h1>
-<br>
-<div align="center">
-<img alt="covid19" src="https://i.imgur.com/X8iwgOV.png" width="95%">
+# Track COVID-19
+
+<div>
+    <img alt="covid19" src="https://i.imgur.com/X8iwgOV.png" width="95%">
 </div>
 
 ## Dependencies
